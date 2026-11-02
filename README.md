@@ -1,0 +1,55 @@
+# 交棒總在終點後
+
+《起跑總在開始前》（[larch-start-line](https://github.com/yazelin/larch-start-line)）的下篇，Larch 視覺小說。
+
+整部作品就是一封信：林向晚在女兒程真六歲、快要從幼稚園畢業的時候，替她寫了一封信。信寫到一半，她停下筆抬頭看了一眼，看見的東西決定這封信接下來寫成什麼樣子。三條線各自平行，每條線讀完第一封信，會再接一封很多年以後的信。
+
+形式是 CG 加文字，沒有立繪，沒有地圖。
+
+## 目前進度
+
+- 故事與全部信件文字：完成，經過兩個模型試讀後修過一輪。
+- 查證紀錄：完成（`canon/查證紀錄.md`）。
+- CG 清單與年紀表：第一版（`canon/CG清單.md`）。
+- 視覺小說劇本草稿：由文字自動組成（`canon/劇本草稿.md`）。
+- 定錨、CG、音樂、放進 Larch：進行中。
+
+## 檔案
+
+| 路徑 | 內容 |
+|---|---|
+| `canon/設計.md` | 討論過程中定下的每一個決定 |
+| `canon/共同段落.md` | 分歧前三條線共用的信 |
+| `canon/正常線.md`、`canon/正常線-後續.md` | 正常線第一封與十七歲那封（含學長、學姊兩條） |
+| `canon/悲劇線.md`、`canon/悲劇線-後續.md` | 悲劇線第一封與回家前一天那封 |
+| `canon/幻想線.md`、`canon/幻想線-後續.md` | 幻想線第一封與收養以後那封 |
+| `canon/CG清單.md` | 每一張 CG 對應的文字、畫面、人物年紀 |
+| `canon/劇本草稿.md` | 一段一頁的劇本，標出 CG、選項、音樂、音效 |
+| `canon/定錨提示詞.md` | 各年紀角色定錨的提示詞 |
+| `canon/查證紀錄.md` | 寫稿時查過的事實與來源 |
+| `canon/介紹文.md` | 作品介紹文草稿 |
+| `assets/art/anchors/` | 角色定錨圖 |
+| `assets/art/cg/` | CG |
+| `tools/build_script.py` | 從 `canon/` 的文字重新組出劇本草稿 |
+| `tools/cg_jobs.py`、`tools/jobs.py` | 產圖工具與工作定義 |
+
+## 重新產生劇本草稿
+
+```bash
+python3 tools/build_script.py
+```
+
+## 產圖
+
+```bash
+CODEX_IMAGE_BASE=<服務網址> CODEX_IMAGE_KEY=<金鑰> python3 tools/cg_jobs.py <工作名>
+```
+
+服務網址與金鑰只放在本機，不進 repo。送圖會排隊（`~/.cache/cg_jobs/` 的 `interval`、`max_inflight`）。
+
+## 授權
+
+- 故事文字、劇本、美術、音樂：CC BY-NC 4.0，見 `LICENSE-CONTENT.md`。
+- 程式碼（`tools/`）：MIT，見 `LICENSE`。
+
+本作部分內容涉及失去親人與情緒低落。如果你或身邊的人覺得撐不下去，請撥打衛福部安心專線 1925，二十四小時免付費。
