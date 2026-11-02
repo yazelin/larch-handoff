@@ -1,0 +1,8 @@
+{
+ "job": "img_8ce73e880a279609e61d29ea",
+ "prompt": "Image 1 is Cheng Che (程徹) at about 35. Image 2 is the painting style anchor only.\nPaint the same man at about 45: same face as Cheng Che in the reference: same eyes, same face shape, short slightly messy black hair cut shorter and neater, a little gray at the temples, faint lines at the eyes, still lean. He wears a dark green polo shirt and khaki trousers. Expression: quiet, gentle.\nFraming: character portrait for a visual novel, from the top of the head down to mid-thigh, body turned slightly (three-quarter front view), face toward the viewer, arms relaxed at the sides. Expression: calm, gentle, mouth closed.\nPainting style: match the style anchor image only for technique: soft transparent watercolor, gentle paper-grain texture inside the figure, pale luminous palette, loose wet edges inside the painting but a clean readable outline against the background. Background: one single flat uniform pure chroma green color (#00FF00) filling the entire background, perfectly even, no gradient, no texture, no shadow, no floor, no vignette. The figure must not touch any edge of the image; leave green margin above the head and at both sides. Correct anatomy, five fingers on each hand. Single figure, no text, no letters, no logos, no watermark. Portrait orientation.",
+ "refs": [
+  "/home/ct/larch-handoff/assets/art/anchors/cheng35_v1.webp",
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

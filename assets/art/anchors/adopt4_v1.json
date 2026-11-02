@@ -1,0 +1,7 @@
+{
+ "job": "img_31343529f23b91602093b31b",
+ "prompt": "Image 1 is the painting style anchor only.\nPaint a 4-year-old Taiwanese girl, a child waiting to be adopted: a round face, slightly tanned skin, big round dark brown eyes, a small button nose, soft slightly wavy black hair cut in a short bob that reaches her jaw, no bangs. She wears a faded mint-green t-shirt that is a little too big, light brown shorts and small sandals. Framing: full body of a small child standing, three-quarter front view. Expression: shy, cautious, looking up a little.\nFraming: character portrait for a visual novel, from the top of the head down to mid-thigh, body turned slightly (three-quarter front view), face toward the viewer, arms relaxed at the sides. Expression: calm, gentle, mouth closed.\nPainting style: match the style anchor image only for technique: soft transparent watercolor, gentle paper-grain texture inside the figure, pale luminous palette, loose wet edges inside the painting but a clean readable outline against the background. Background: one single flat uniform pure chroma green color (#00FF00) filling the entire background, perfectly even, no gradient, no texture, no shadow, no floor, no vignette. The figure must not touch any edge of the image; leave green margin above the head and at both sides. Correct anatomy, five fingers on each hand. Single figure, no text, no letters, no logos, no watermark. Portrait orientation.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

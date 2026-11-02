@@ -1,0 +1,9 @@
+{
+ "job": "img_9b2ffa0ff6ebf5d1d4f520bd",
+ "prompt": "Image 1 is Lin Xiangwan (林向晚) at 17, image 2 is the same woman at 24. Image 3 is the painting style anchor only.\nPaint her at about 20, a Taiwanese university student: same face as Lin Xiangwan in the reference: same eyes, same face shape, same fine wispy bangs, long straight black hair in a low ponytail, between image 1 and image 2 in age. She wears a light gray hooded track jacket half zipped over a white t-shirt and navy track pants. No race bib, no logos.\nFraming: character portrait for a visual novel, from the top of the head down to mid-thigh, body turned slightly (three-quarter front view), face toward the viewer, arms relaxed at the sides. Expression: calm, gentle, mouth closed.\nPainting style: match the style anchor image only for technique: soft transparent watercolor, gentle paper-grain texture inside the figure, pale luminous palette, loose wet edges inside the painting but a clean readable outline against the background. Background: one single flat uniform pure chroma green color (#00FF00) filling the entire background, perfectly even, no gradient, no texture, no shadow, no floor, no vignette. The figure must not touch any edge of the image; leave green margin above the head and at both sides. Correct anatomy, five fingers on each hand. Single figure, no text, no letters, no logos, no watermark. Portrait orientation.",
+ "refs": [
+  "larch-start-line/assets/art/portraits/lin-hs-calm.webp",
+  "larch-start-line/assets/art/portraits/lin-adult-calm.webp",
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

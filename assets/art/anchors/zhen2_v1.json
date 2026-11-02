@@ -1,0 +1,8 @@
+{
+ "job": "img_8ae7ef1ffe53d1fa6f6cff08",
+ "prompt": "Image 1 is Cheng Zhen (程真) at 6. Image 2 is the painting style anchor only.\nPaint the same child as a 2-year-old toddler girl: round chubby cheeks, short soft black hair with tiny bangs, same eyes as image 1. She wears a light pink cotton romper. Framing: full body of a small toddler standing, three-quarter front view. Expression: curious.\nFraming: character portrait for a visual novel, from the top of the head down to mid-thigh, body turned slightly (three-quarter front view), face toward the viewer, arms relaxed at the sides. Expression: calm, gentle, mouth closed.\nPainting style: match the style anchor image only for technique: soft transparent watercolor, gentle paper-grain texture inside the figure, pale luminous palette, loose wet edges inside the painting but a clean readable outline against the background. Background: one single flat uniform pure chroma green color (#00FF00) filling the entire background, perfectly even, no gradient, no texture, no shadow, no floor, no vignette. The figure must not touch any edge of the image; leave green margin above the head and at both sides. Correct anatomy, five fingers on each hand. Single figure, no text, no letters, no logos, no watermark. Portrait orientation.",
+ "refs": [
+  "/home/ct/larch-handoff/assets/art/anchors/zhen6_v1.webp",
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

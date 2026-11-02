@@ -1,0 +1,9 @@
+{
+ "job": "img_7fce7cda38b072dde094d846",
+ "prompt": "Image 1 is the mother Lin Xiangwan (林向晚), image 2 is the father Cheng Che (程徹). Image 3 is the painting style anchor only.\nPaint their daughter Cheng Zhen (程真), a 6-year-old Taiwanese kindergarten girl: she clearly resembles both parents, her mother's face shape and fine wispy bangs, her father's eyes. Black hair in two short low pigtails. She wears a pale yellow t-shirt, a navy pinafore dress and white socks. Expression: bright, lively, a small smile.\nFraming: character portrait for a visual novel, from the top of the head down to mid-thigh, body turned slightly (three-quarter front view), face toward the viewer, arms relaxed at the sides. Expression: calm, gentle, mouth closed.\nPainting style: match the style anchor image only for technique: soft transparent watercolor, gentle paper-grain texture inside the figure, pale luminous palette, loose wet edges inside the painting but a clean readable outline against the background. Background: one single flat uniform pure chroma green color (#00FF00) filling the entire background, perfectly even, no gradient, no texture, no shadow, no floor, no vignette. The figure must not touch any edge of the image; leave green margin above the head and at both sides. Correct anatomy, five fingers on each hand. Single figure, no text, no letters, no logos, no watermark. Portrait orientation.",
+ "refs": [
+  "larch-start-line/assets/art/portraits/lin-adult-calm.webp",
+  "larch-start-line/assets/art/portraits/cheng-adult-calm.webp",
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}
