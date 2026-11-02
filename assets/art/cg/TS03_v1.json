@@ -1,0 +1,8 @@
+{
+ "job": "img_ee96a13c213adb3e6713791b",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 35 years old.\n\nScene: an early morning neighborhood park with a walking loop, soft mist, a few elderly people far\naway doing exercises. LIN XIANGWAN (35), thin, in a plain jacket, walks slowly on the loop, one step at a time, face calm and tired,\nthe sunrise behind her.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin35_v1.webp"
+ ]
+}

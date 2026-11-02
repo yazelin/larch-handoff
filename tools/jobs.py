@@ -244,8 +244,8 @@ heavily pregnant, lies on the bed half raised on pillows, just woken, looking do
 face. CHENG CHE sits on the floor at the foot of the bed, leaning against the bed frame, asleep with his head tilted; his right hand
 still rests on her foot on top of the blanket. Her hands hidden under the blanket."""),
     "C17": cg([("lin", 28, 28), ("cheng", 30, 28)], """Scene: a small obstetrics consultation room, a monitor screen with a soft gray
-ultrasound shape and a bright heartbeat line (no text, no numbers). LIN XIANGWAN, early pregnancy, sits on the examination chair,
-turning her head to look at him. CHENG CHE stands beside her, silent, staring at the screen, completely still, eyes wide and shining.
+ultrasound shape and a bright heartbeat line (no text, no numbers). LIN XIANGWAN, only about three months pregnant so her belly is still completely flat and not visible at all, sits on the
+examination chair in a loose blouse, turning her head to look at him. CHENG CHE stands beside her, silent, staring at the screen, completely still, eyes wide and shining.
 The doctor is only a blurred white coat at the edge of the frame."""),
     "C18": cg([("cheng", 30, 28)], """Scene: night, a small dining table under a hanging lamp. CHENG CHE sits bent over a sheet of paper
 covered in rows of handwritten Chinese characters, most of them crossed out (all writing is soft illegible pencil marks, nothing

@@ -1,0 +1,8 @@
+{
+ "job": "img_4e8dc326105dbdb13c3e9359",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 21 years old.\n\nScene: a framed photograph hanging on a bedroom wall in dim evening light; the picture inside the\nframe shows a university relay race: CHENG CHE (21) has just handed off the baton and stopped on the track, hands on his hips,\nwatching the next runner sprint away up the lane, smiling so his eyes curve into thin lines. The frame and the wall around it are\nvisible.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/cheng20_v1.webp"
+ ]
+}

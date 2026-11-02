@@ -1,0 +1,8 @@
+{
+ "job": "img_cfea5e154c99b788d97484c6",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 27 years old.\n\nScene: a small quiet bedroom at night, a simple light-wood vanity desk against the wall with a round mirror, a warm desk lamp, a few cosmetics bottles with blank labels, a sheet of letter paper and a pen, late at night, the same angle as a picture of a woman writing from behind:\nLIN XIANGWAN (27), younger, sits at the vanity writing a letter for the first time, seen from behind and slightly to the side, the\nbedroom door ajar with darkness beyond. No readable writing.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin28_v1.webp"
+ ]
+}

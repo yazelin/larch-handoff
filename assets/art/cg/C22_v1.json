@@ -1,0 +1,7 @@
+{
+ "job": "img_9f24e8d4f364b774b9e5b263",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\n\nClose-up with only hands: a tiny newborn baby's hand, wrapped in a white blanket, gripping the index finger of a\nwoman's hand tightly with all its little fingers. Soft warm daylight, very gentle. Only the woman's one hand and the baby's one hand\nare visible, both anatomically correct.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

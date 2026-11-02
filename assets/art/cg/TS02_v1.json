@@ -1,0 +1,9 @@
+{
+ "job": "img_a777c91ffa22af5f3419dd47",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of GRANDMA (Lin Xiangwan's mother, keep her face and hair); in this picture GRANDMA is about 69 years old.\nImage 3 is the character design of CHENG ZHEN (their daughter, keep her face and eyes); in this picture CHENG ZHEN is about 7 years old.\n\nScene: an old-fashioned Taiwanese grandmother's home in the morning, a wooden\nchair. GRANDMA (69) stands behind the 7-year-old CHENG ZHEN braiding her hair a little clumsily; the child sits obediently. A small\npink backpack hangs on the back of the chair with a set of keys clipped to its zipper.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/grandma68_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/zhen6_v1.webp"
+ ]
+}

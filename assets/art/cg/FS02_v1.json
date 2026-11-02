@@ -1,0 +1,8 @@
+{
+ "job": "img_7b94e6707b616c8e27f511a2",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 34 years old.\n\nScene: a dining table in early morning light. An open laptop on the table has just been turned to\nface the empty chair across from CHENG CHE (34), its screen showing a blurred web page with a form (nothing readable). He sits with\ncoffee, red-eyed from little sleep, pushing the laptop forward with one hand, saying nothing.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/cheng35_v1.webp"
+ ]
+}

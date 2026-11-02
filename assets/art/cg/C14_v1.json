@@ -1,0 +1,7 @@
+{
+ "job": "img_18e7a21988481863783f775a",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\n\nScene with NO people: early morning in a bedroom, pale window light. On a small wooden bedside table: a small\nplate with a few plain square soda crackers and a glass of warm water with a faint wisp of steam, next to a folded pair of glasses\nand a phone face down. The edge of a bed with a rumpled white duvet at the side. Quiet, tender.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

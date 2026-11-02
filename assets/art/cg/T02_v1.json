@@ -1,0 +1,8 @@
+{
+ "job": "img_cfb17426cd71eb2ef81fd219",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 31 years old.\n\nScene: just behind the finish arch of a city marathon on a bright autumn morning, crowds and foil\nblankets in the background (no text on the arch or banners). CHENG CHE (31), wearing a running shirt with a blank race bib and a\nfinisher medal, stands with two colleagues posing for a photo, all three making victory signs, he is laughing. This is the only moment\nshown: everyone is happy.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/cheng30_v1.webp"
+ ]
+}

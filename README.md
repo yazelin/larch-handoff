@@ -31,13 +31,25 @@
 | `assets/art/anchors/` | 角色定錨圖 |
 | `assets/art/cg/` | CG |
 | `tools/build_script.py` | 從 `canon/` 的文字重新組出劇本草稿 |
+| `tools/build_project.py` | 從劇本草稿組出 Larch 專案檔 `project.json` |
+| `tools/sheet.py` | 把幾張圖排成一列檢查用 |
+| `assets/art/cg/upstream/` | 沿用上篇的 CG（販賣機、終點線後的對望） |
 | `tools/cg_jobs.py`、`tools/jobs.py` | 產圖工具與工作定義 |
 
-## 重新產生劇本草稿
+## 重新產生劇本草稿與 Larch 專案檔
 
 ```bash
-python3 tools/build_script.py
+python3 tools/build_script.py     # canon/ 的文字 → canon/劇本草稿.md
+python3 tools/build_project.py    # 劇本草稿 → project.json（CG 用 assets/art/cg/ 最新的一版）
 ```
+
+## 本機預覽
+
+```bash
+python3 ~/larch-preview/serve.py project.json
+```
+
+用 [larch-preview](https://github.com/yazelin/larch-preview) 在本機的 Larch 播放器裡播，按 F 可以在畫面上留回饋。
 
 ## 產圖
 

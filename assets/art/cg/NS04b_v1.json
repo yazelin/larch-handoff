@@ -1,0 +1,7 @@
+{
+ "job": "img_0881c69075346eaaaaf4cd41",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\n\nScene with NO people: the small entrance hall of a Taiwanese apartment: a front door, a low wooden shoe cabinet, a row of key hooks on the wall, a narrow tiled floor where shoes are left, night, the hall light on. On the tiled floor two pairs of running shoes are\nsqueezed side by side, slightly overlapping: a red-and-white pair and a navy-and-yellow pair of the same size.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp"
+ ]
+}

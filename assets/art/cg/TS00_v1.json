@@ -1,0 +1,9 @@
+{
+ "job": "img_a7ee31828e30dd9b53cbe8fb",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 34 years old.\nImage 3 is the character design of GRANDMA (Lin Xiangwan's mother, keep her face and hair); in this picture GRANDMA is about 68 years old.\n\nScene: a bedroom at night, a dim lamp. LIN XIANGWAN (34) sits on the edge of\nthe bed, bent forward, exhausted, crying silently. GRANDMA (68) sits beside her in a cardigan thrown over her pajamas, holding Lin's\nhand in both of hers on her lap, steady and calm. Through the window the sky is beginning to turn pale before dawn.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin35_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/grandma68_v1.webp"
+ ]
+}

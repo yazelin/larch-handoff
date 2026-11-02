@@ -1,0 +1,8 @@
+{
+ "job": "img_d30ed736b0243f7c68781569",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of CHENG ZHEN (their daughter, keep her face and eyes); in this picture CHENG ZHEN is about 6 years old.\n\nScene: a cozy family living room in a Taiwanese apartment: a light gray fabric sofa, a low wooden coffee table, a television on a low cabinet, a window with sheer curtains, a few children's drawings taped on the wall (scribbles, no text), afternoon. The 6-year-old CHENG ZHEN stands alone on the sofa cushions, chest\nout, practicing a speech loudly to nobody; the rest of the sofa and the room are empty. Quiet light.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/zhen6_v1.webp"
+ ]
+}

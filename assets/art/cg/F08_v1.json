@@ -1,0 +1,9 @@
+{
+ "job": "img_c5766200480aa448b12b5792",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 30 years old.\nImage 3 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 30 years old.\n\nScene: a bright breakfast table in the morning. CHENG CHE (30) leans toward LIN\nXIANGWAN holding his phone out to show her an article (screen is blurred), his face concerned and caring. LIN XIANGWAN holds a small\nweekly pill organizer in her hand and is nodding slowly, her eyes lowered, a guilty quiet expression.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin28_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/cheng30_v1.webp"
+ ]
+}

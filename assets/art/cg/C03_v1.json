@@ -1,0 +1,9 @@
+{
+ "job": "img_e36b56f096d8cef8de767be5",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the same athletics track from the previous story, use it for the place and the uniform.\nImage 3 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 17 years old.\n\nScene: a red PU athletics track at a high school meet, bright afternoon. CHENG CHE in the navy\nsleeveless singlet with white trim and a blank white race bib (nothing printed) is in the last straight of the 800m, leaning\nforward and accelerating into his final sprint, mid-stride, determined calm eyes looking ahead down the track. Two other runners\nin different colored singlets are a little behind him, blurred with motion. Stands and trees far in the background.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "larch-start-line/assets/art/cg/cg-finish.webp",
+  "larch-start-line/assets/art/portraits/cheng-hs-calm.webp"
+ ]
+}

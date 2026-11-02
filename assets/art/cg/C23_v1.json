@@ -1,0 +1,9 @@
+{
+ "job": "img_9105a3298424b3c455670a27",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 29 years old.\nImage 3 is the character design of CHENG ZHEN (their daughter, keep her face and eyes); in this picture CHENG ZHEN is about 1 years old.\n\nScene: a small family kitchen, daytime. LIN XIANGWAN, still in an apron, crouches\non the floor in front of a 1-year-old baby girl CHENG ZHEN who sits on a play mat looking up at her with an open mouth, babbling. Lin\nis crying and laughing at the same time, both hands covering her mouth. A plate in the sink behind her.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin28_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/zhen2_v1.webp"
+ ]
+}

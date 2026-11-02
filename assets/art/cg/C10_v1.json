@@ -1,0 +1,9 @@
+{
+ "job": "img_1868d721f2ca0d6d2e63e548",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 20 years old.\nImage 3 is the character design of CHENG CHE (the man, keep his face and eyes; short slightly messy black hair); in this picture CHENG CHE is about 20 years old.\n\nScene: inside a Taiwanese local train carriage at night, long side seats, warm\ninterior light, dark windows with blurred passing lights. LIN XIANGWAN, tired after a race, sleeps with her head on CHENG CHE's left\nshoulder, sports bags at their feet. He sits very still, head slightly turned toward her, awake and gentle, his left arm stiffly\nstill so as not to wake her. Nobody else in this part of the carriage.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin20_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/cheng20_v1.webp"
+ ]
+}
