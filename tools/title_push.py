@@ -77,12 +77,22 @@ def put_dialogue(work):
     from dialogue_html import PAGES
     state_file = os.path.join(R, 'larch.json') if work == 'handoff' else os.path.join(START, 'assets/title.json')
     url = f"{API}/{json.load(open(state_file))['project_id']}"
+    page = PAGES[work]
+    if work == 'start':   # 上篇的水彩刷痕底圖：第一次上傳到上篇媒體庫，id 記在 assets/title.json
+        st = json.load(open(state_file))
+        if not st.get('brush_id'):
+            brush = os.path.join(START, 'assets/ui/start_brush.webp')
+            _, j = req('POST', url + '/media', {'name': 'start_dialogue_brush.webp', 'mimeType': 'image/webp', 'category': 'scene',
+                                                 'base64': base64.b64encode(open(brush, 'rb').read()).decode()})
+            st['brush_id'], st['brush_url'] = j['asset']['id'], j['asset']['url']
+            json.dump(st, open(state_file, 'w'), ensure_ascii=False, indent=1)
+        page = page.replace('{{BRUSH}}', 'media:' + st['brush_id'])
     _, cur = req('GET', url); p = cur.get('project', cur)
     old = (((p.get('settings') or {}).get('customInterfaces') or {}).get('dialogue') or {}).get('html') or ''
-    req('PUT', url + '/interface', {'surface': 'dialogue', 'html': PAGES[work], 'enabled': True, 'expectedHtml': old,
+    req('PUT', url + '/interface', {'surface': 'dialogue', 'html': page, 'enabled': True, 'expectedHtml': old,
                                     'summary': '自訂對話框：不擋 CG' + ('（信紙卡）' if work == 'handoff' else '（貼底字幕帶）')})
     _, back = req('GET', url); bp = back.get('project', back)
-    ok = ((bp['settings'].get('customInterfaces') or {}).get('dialogue') or {}).get('html') == PAGES[work]
+    ok = ((bp['settings'].get('customInterfaces') or {}).get('dialogue') or {}).get('html') == page
     if bp.get('description') != p.get('description'): print('注意：簡介跟寫入前不一樣了，要重推')
     print(work, '對話框讀回核對', '通過' if ok else '失敗')
     if not ok: sys.exit(1)

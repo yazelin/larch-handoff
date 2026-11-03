@@ -192,6 +192,12 @@ finish line. All figures are on the RIGHT half of the picture; the LEFT half is 
 LIN XIANGWAN (34) in everyday clothes crouches on one knee on the track, smiling gently, holding out a relay baton with her right hand.
 CHENG ZHEN (6), a small girl in a T-shirt and shorts, stands facing her and grasps the other end of the baton with both small hands,
 looking up at her mother with bright eyes. The baton is between them, both clearly holding it. Soft sunlight, long shadows, hopeful."""),
+    # 上篇對話框底圖：白紙上一道水彩刷痕，之後白色轉透明（tools/brush_alpha.py）。無人物。
+    "UI_BRUSH": cg([], """A single wide horizontal watercolor brush stroke on clean plain white paper, nothing else in the picture.
+The stroke is a deep navy blue wash (like the track uniforms), spanning almost the full width, about one quarter of the image height,
+centered vertically. Its color is richest in the middle and fades softly toward the top and bottom edges, with natural irregular
+watercolor blooms, granulation and soft feathered ends on the left and right. Along the upper edge of the stroke runs one thin crisp
+line of brick-red paint, like a lane line on a red running track, slightly broken in two places. The rest of the paper is pure white."""),
     "C01": cg([("lin", 35, 34)], f"""Scene: {VANITY}. LIN XIANGWAN sits at the vanity seen from behind and slightly to the side, only
 her back, shoulder, low ponytail and her right hand are visible; her face is turned down toward the paper and not visible in the
 mirror (the mirror only reflects the warm lamp and the dark room). Her right hand holds the pen over the letter paper, writing;
