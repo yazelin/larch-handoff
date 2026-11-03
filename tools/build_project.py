@@ -132,7 +132,7 @@ def build():
         "stage": {"actors": []}, "characterLayers": []}})
     for e_id in ends: edge(e_id, "to-site-black")
     edge("to-site-black", "to-site")
-    proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges}, site_board()]}
+    proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges, "thumbnail": cg_path("COVER")}, site_board()]}
     json.dump(proj, open(os.path.join(R, "project.json"), "w"), ensure_ascii=False, indent=1)
     miss = sorted({m for m in re.findall(r"【CG (\w+)】", open(os.path.join(R, "canon", "劇本草稿.md")).read()) if not cg_path(m)})
     print(f"{len(nodes)} 張卡、{len(edges)} 條線；還沒有圖的 CG：{' '.join(miss) or '無'}")

@@ -1624,7 +1624,8 @@
      "sourceHandle": "out",
      "targetHandle": "in"
     }
-   ]
+   ],
+   "thumbnail": "assets/art/cg/COVER_v3.webp"
   },
   {
    "id": "board-site",

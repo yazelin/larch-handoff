@@ -107,6 +107,12 @@ def main(summary):
     project.pop('nodes', None); project.pop('edges', None)
     settings = dict(project.get('settings') or {})
     settings['titleCoverImage'] = urls[cover]
+    settings['stageFit'] = 'contain'   # 背景就是內容，手機直式也顯示整張 CG（larch-vn：優理日記實測）
+    # CG 收藏：只放劇情 CG（含封面），照信裡的順序，標題取 CG 清單；轉場的全黑圖不收
+    gal = json.loads(re.search(r'window\.GALLERY = (.*);', (ROOT / 'docs/assets-site/gallery.js').read_text(), re.S).group(1))
+    settings['cgGallerySource'] = 'picked'
+    settings['cgGalleryItems'] = [{'url': urls[cover], 'title': '交棒'}] + [
+        {'url': urls['assets/' + path], 'title': title} for s in gal for path, title in s['items'] if 'assets/' + path in urls]
     settings['projectThumbnail'] = state.get('title_loop_url') or urls[cover]   # 動態縮圖（tools/title_push.py 上傳的）
     theme = next(n['data']['bgm'] for n in built['boards'][0]['nodes'] if n['id'] == 'trunk')
     settings['titleScreenEnabled'] = True
