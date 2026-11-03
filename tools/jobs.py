@@ -429,9 +429,12 @@ lies on the letter."""),
     "F02": cg([("lin", 13, 13), ("grandma", 47, 47)], """Scene: a hospital outpatient waiting area, rows of seats, daytime. LIN
 XIANGWAN (13) with short chin-length hair in a plain school uniform sits small and tense beside GRANDMA (47), who holds a white
 pharmacy paper bag on her lap (no text) and rests a protective hand on the girl's back. The girl looks down at her shoes."""),
-    "F03": cg([("lin", 13, 13), ("grandma", 47, 47)], """Scene: outside the closed front door of an old apartment on a gray evening.
-A school bag lies thrown on the stairwell floor, its contents spilled a little. LIN XIANGWAN (13) stands looking at the shut door, her
-eyes wet. GRANDMA (47) stands beside her, picking up the bag with one hand and holding the girl's shoulder with the other."""),
+    "F03": cg([("lin", 13, 13), ("grandma", 47, 47)], """Scene: the concrete stair landing outside the closed front door of an old
+apartment on a gray evening, seen from a standing eye-level camera, the flat landing floor clearly visible and extending toward the
+viewer. LIN XIANGWAN (13) in a school uniform stands on the landing floor looking at the shut door, her eyes wet; GRANDMA (47) stands on
+the same floor beside her, one hand on the girl's shoulder, the other hand holding the school bag she has just picked up. Both are shown
+full length: their feet, in plain shoes, rest flat on the landing floor with soft contact shadows under them. A few spilled books lie on
+the same floor next to them. The stairs going down are behind them, to the side."""),
     "F05": cg([("lin", 20, 19)], """Scene: a quiet hospital room on a summer day, white curtains half drawn. LIN XIANGWAN (19) lies in
 the bed under a white blanket up to her chest, pale, holding a phone to her ear with her right hand, smiling as she talks, while tears
 run from the corner of her eye. Nobody else in the room."""),
@@ -474,8 +477,10 @@ toys on a mat. THE GIRL (4) stands half hidden behind a social worker (a woman s
 her small hand gripping the hem of the worker's shirt, peeking out shyly. LIN XIANGWAN (36) and CHENG CHE (36) crouch down at her eye
 level, very gently, Lin's arms slightly open."""),
     "FS04": cg([("lin", 35, 36), ("adopt", 4, 4)], """Scene: a small child's bedroom at night, a star-shaped night light. THE GIRL (4)
-is tucked into bed under a pastel blanket, looking up and saying goodnight. LIN XIANGWAN (36) stands at the door with her hand on the
-light switch, frozen, her eyes filling with tears."""),
+is tucked into bed under a pastel blanket, looking up and saying goodnight. LIN XIANGWAN (36) stands in the open doorway, shown full length:
+both feet in white socks rest on the same wooden floor as the bed, with a soft shadow under them, the doorway threshold visible at her feet.
+Her right hand is on the light switch beside the door frame, frozen, her eyes filling with tears. Camera at standing eye level from inside
+the room, the floor clearly visible between the bed and the door."""),
     "FS05": cg([("grandma", 68, 70), ("adopt", 4, 4)], """Scene: a family living room, daytime. GRANDMA (70) bends down and hands a
 red envelope (plain red, no characters) to THE GIRL (4) with both hands; the girl takes it with both hands, shy and delighted."""),
     "FS06": cg([], """Scene with NO people: on a folded handwritten letter (illegible) lies a small brand-new set of house keys with a
@@ -492,6 +497,8 @@ JOBS.update({
     "N02": shoe_fix("N02", [("zhen", 6, 6)], "the little girl CHENG ZHEN wears the small pink children's sneakers from image 3.", "N03", "the entryway; the small pink pair is CHENG ZHEN's"),
     "N04": shoe_fix("N04", [("lin", 35, 34), ("zhen", 6, 6)], "the little girl CHENG ZHEN running on the track wears the small pink children's sneakers from image 3.",
                     "N03", "the entryway; the small pink pair is CHENG ZHEN's"),
+    "COVER": shoe_fix("COVER", [("lin", 35, 34), ("zhen", 6, 6)], "the little girl CHENG ZHEN wears the small pink children's sneakers from image 3; "
+                      "LIN XIANGWAN keeps her white sneakers.", "N03", "the entryway; the small pink pair is CHENG ZHEN's"),
     "NS01": shoe_fix("NS01", [("zhen", 17, 17), ("lin", 45, 45), ("cheng", 45, 45)], "CHENG ZHEN, crossing the finish line in the red singlet, wears the red-and-white "
                      "running shoes from image 3.", "NS04a", "the two pairs of running shoes; the red-and-white pair is CHENG ZHEN's"),
 })
