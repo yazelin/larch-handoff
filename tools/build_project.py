@@ -126,7 +126,12 @@ def build():
     ends = [n["id"] for n in nodes if n["id"] not in {e["source"] for e in edges} and n["data"]["type"] == "dialogue"]
     nodes.append({"id": "to-site", "type": "story", "position": {"x": x[0], "y": 260}, "data": {
         "type": "boardJump", "title": "前往第二章", "text": "", "jumpBoardId": SITE_BOARD, "jumpNodeId": "site"}})
-    for e_id in ends: edge(e_id, "to-site")
+    nodes.append({"id": "to-site-black", "type": "story", "position": {"x": x[0], "y": 520}, "data": {   # 作者：最後一頁先整個暗下來，再轉公開站
+        "type": "scene", "title": "轉場：全黑", "text": "", "background": "assets/art/black.webp", "transition": "fadeBlack", "transitionMs": 2200,
+        "bgmAction": "fadeOut", "bgmFadeOutMs": 2200, "autoAdvance": {"enabled": True, "mode": "delay", "delayMs": 2000, "uninterruptible": True},
+        "stage": {"actors": []}, "characterLayers": []}})
+    for e_id in ends: edge(e_id, "to-site-black")
+    edge("to-site-black", "to-site")
     proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges}, site_board()]}
     json.dump(proj, open(os.path.join(R, "project.json"), "w"), ensure_ascii=False, indent=1)
     miss = sorted({m for m in re.findall(r"【CG (\w+)】", open(os.path.join(R, "canon", "劇本草稿.md")).read()) if not cg_path(m)})

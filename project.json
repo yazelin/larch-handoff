@@ -1439,6 +1439,34 @@
       "jumpBoardId": "board-site",
       "jumpNodeId": "site"
      }
+    },
+    {
+     "id": "to-site-black",
+     "type": "story",
+     "position": {
+      "x": 7560,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "轉場：全黑",
+      "text": "",
+      "background": "assets/art/black.webp",
+      "transition": "fadeBlack",
+      "transitionMs": 2200,
+      "bgmAction": "fadeOut",
+      "bgmFadeOutMs": 2200,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 2000,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
     }
    ],
    "edges": [
@@ -1571,20 +1599,27 @@
     {
      "id": "e18",
      "source": "normal-end",
-     "target": "to-site",
+     "target": "to-site-black",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
      "id": "e19",
      "source": "tragic-seq",
-     "target": "to-site",
+     "target": "to-site-black",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
      "id": "e20",
      "source": "fantasy-seq",
+     "target": "to-site-black",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e21",
+     "source": "to-site-black",
      "target": "to-site",
      "sourceHandle": "out",
      "targetHandle": "in"
