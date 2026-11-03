@@ -285,7 +285,7 @@
       "background": "assets/art/cg/C27_v1.webp",
       "choices": [
        "房門外的客廳",
-       "牆上",
+       "床頭櫃上的照片",
        "化妝台上的鏡子"
       ],
       "choiceMode": "branch",
@@ -663,15 +663,15 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "照片線（選「牆上」）",
+      "title": "照片線（選「床頭櫃上的照片」）",
       "speaker": "",
-      "text": "牆上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
+      "text": "床頭櫃上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
       "dialogueLines": [
        {
         "id": "l0",
         "speaker": "",
-        "text": "牆上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
-        "background": "assets/art/cg/T01_v1.webp",
+        "text": "床頭櫃上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
+        "background": "assets/art/cg/T01_v2.webp",
         "bgm": "assets/audio/bgm-tragic.mp3",
         "bgmVolume": 0.5,
         "bgmLoop": true
@@ -794,7 +794,7 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/T01_v1.webp",
+      "background": "assets/art/cg/T01_v2.webp",
       "bgm": "assets/audio/bgm-tragic.mp3",
       "bgmVolume": 0.5,
       "bgmLoop": true

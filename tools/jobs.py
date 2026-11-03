@@ -344,10 +344,11 @@ back three-quarters to the viewer, sleeves rolled up, slowly washing a plate und
 from the side; on the desk beside the paper stands a small framed photo of a girl in a red running singlet crossing a finish line.
 No readable writing."""),
     # ── 照片線 ──
-    "T01": cg([("cheng", 20, 21)], """Scene: a framed photograph hanging on a bedroom wall in dim evening light; the picture inside the
-frame shows a university relay race: CHENG CHE (21) has just handed off the baton and stopped on the track, hands on his hips,
-watching the next runner sprint away up the lane, smiling so his eyes curve into thin lines. The frame and the wall around it are
-visible."""),
+    "T01": cg([("cheng", 20, 21)], """Scene: close view of a bedside table in a dim bedroom at night, lit by a small warm lamp. On the
+table stands a small 4x6 inch printed photo in a simple light wood desk frame, beside the lamp, a glass of water and a phone charger.
+The printed photo inside the small frame shows a university relay race: CHENG CHE (21) has just handed off the baton and stopped on the track, hands on his hips,
+watching the next runner sprint away up the lane, smiling so his eyes curve into thin lines. The small frame stands upright on the
+table, the edge of the bed with rumpled sheets beside it. An ordinary keepsake snapshot, casual and warm."""),
     "T02": cg([("cheng", 30, 31)], """Scene: just behind the finish arch of a city marathon on a bright autumn morning, crowds and foil
 blankets in the background (no text on the arch or banners). CHENG CHE (31), wearing a running shirt with a blank race bib and a
 finisher medal, stands with two colleagues posing for a photo, all three making victory signs, he is laughing. This is the only moment
