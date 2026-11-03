@@ -229,10 +229,11 @@ interior light, dark windows with blurred passing lights. LIN XIANGWAN, tired af
 shoulder, sports bags at their feet. He sits very still, head slightly turned toward her, awake and gentle, his left arm stiffly
 still so as not to wake her. Nobody else in this part of the carriage."""),
     "C12": cg([("lin", 24, 23), ("cheng", 24, 23)], """Scene: a small Taipei apartment at night, a narrow living room with a plain sofa,
-a television on a low cabinet showing a blurred women's athletics race on a red track (no text on screen). CHENG CHE sits at one end
-of the sofa, LIN XIANGWAN sits sideways with her bare feet stretched onto his lap. He holds her feet covered with both hands (both his
-hands are on her feet, cupping them), and points his chin at the TV with a serious face; she is laughing at him. Warm lamp light,
-the blue glow of the TV. Home clothes like the sweaters in images 2 and 3."""),
+a television on a low cabinet showing a blurred women's athletics race on a red track (no text on screen). CHENG CHE and LIN XIANGWAN sit
+close together, snuggled side by side on the sofa, her legs tucked up beside her under a soft blanket. Hands, written exactly: his right
+arm is stretched out, his right index finger pointing at the TV, the other fingers curled; his left arm is around her shoulders and his
+left hand is hidden behind her. She hugs a cushion to her chest with both arms, laughing at him. He has a serious face as he points.
+Warm lamp light and the blue glow of the TV. Home clothes like the sweaters in images 2 and 3."""),
     "C13": cg([("lin", 24, 24), ("cheng", 24, 24)], """Scene: exactly the same small kitchen on a rainy winter night as image 2: fogged
 window, rain, warm light, a pot on the stove with the fire off and gentle steam. LIN XIANGWAN has just turned around and holds him,
 her face buried against his chest so her eyes cannot be seen, her arms around his waist. CHENG CHE holds her, chin resting on top of
@@ -354,9 +355,11 @@ squeezed side by side, slightly overlapping: a red-and-white pair and a navy-and
     "NS05": cg([("lin", 45, 45), ("cheng", 45, 45)], """Scene: a small home kitchen at night. CHENG CHE (45) stands at the sink with his
 back three-quarters to the viewer, sleeves rolled up, slowly washing a plate under the tap, head down, a faint smile. LIN XIANGWAN
 (45) walks up beside him, leaning on the counter, looking at him amused."""),
-    "NS06": cg([("lin", 45, 45)], f"""Scene: {VANITY}, night. LIN XIANGWAN (45) sits at the vanity writing a letter, a small smile, seen
-from the side; on the desk beside the paper stands a small framed photo of a girl in a red running singlet crossing a finish line.
-No readable writing."""),
+    "NS06": cg([("lin", 45, 45), ("zhen", 17, 17)], f"""Scene: {VANITY}, night. LIN XIANGWAN (45) sits at the vanity writing a letter, a small smile, seen
+from the side. On the desk beside the paper stands a small framed printed photo: inside it, CHENG ZHEN (17, keep her face from her
+reference image) in a red running singlet crosses a finish line with her arms up. The photo inside the frame is painted in exactly the
+same soft watercolor illustration style as the rest of the picture, the same brushwork and palette, like a small painting within the
+painting. No readable writing."""),
     # ── 照片線 ──
     "T01": cg([("cheng", 20, 21)], """Scene: close view of a bedside table in a dim bedroom at night, lit by a small warm lamp. On the
 table stands a small 4x6 inch printed photo in a simple light wood desk frame, beside the lamp, a glass of water and a phone charger.

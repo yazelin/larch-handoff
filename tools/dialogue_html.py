@@ -15,7 +15,9 @@ COMMON_JS = '''<script>
   window.addEventListener('larch:state', function (e) {
     set(false);   // 換句就回來，免得玩家以為卡住
     var d = e.detail || {};
-    root.classList.toggle('is-empty', !String(d.text || '').trim());   // 轉場卡沒有字：整個框藏起來，不留一張空白卡
+    clearTimeout(window.__emptyT);   // 轉場卡沒有字：整個框藏起來，不留一張空白卡；換句時會空 0.1 秒，等 0.3 秒才藏免得閃
+    if (String(d.text || '').trim()) root.classList.remove('is-empty');
+    else window.__emptyT = setTimeout(function () { root.classList.add('is-empty'); }, 300);
   });
 })();
 </script>'''
