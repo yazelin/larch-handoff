@@ -102,7 +102,8 @@ def main(summary):
     project['name'] = built['name']
     project['boards'] = built['boards']
     project['activeBoardId'] = built['boards'][0]['id']
-    intro = (ROOT / 'canon' / '介紹文.md').read_text(encoding='utf-8').split('\n', 1)[1].strip()   # 簡介：去掉「# …（草稿）」標題那行
+    intro = (ROOT / 'canon' / '介紹文.md').read_text(encoding='utf-8').strip()
+    if intro.startswith('# '): intro = intro.split('\n', 1)[1].strip()   # 簡介：有「# 標題」那行就去掉
     project['description'] = re.sub(r'\n\s*---\s*\n', '\n\n', intro)
     project.pop('nodes', None); project.pop('edges', None)
     settings = dict(project.get('settings') or {})
