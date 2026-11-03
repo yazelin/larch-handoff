@@ -104,6 +104,8 @@ body.playing #list li.on .eq{display:flex}
 
 body.nolist main{grid-template-columns:minmax(0,1fr)}
 body.nolist #side{display:none}
+body.bare .top,body.bare main{opacity:0;pointer-events:none}
+.top,main{transition:opacity .6s}
 body.bare #stage::after{opacity:.15}
 #baretip{position:fixed;z-index:5;left:50%;bottom:calc(24px + env(safe-area-inset-bottom));transform:translateX(-50%);padding:7px 16px;border-radius:99px;background:rgb(var(--veil)/.8);color:var(--ink-2);font-size:13px;opacity:0;transition:opacity .6s;pointer-events:none;white-space:nowrap}
 body.bare #baretip.show{opacity:1}
