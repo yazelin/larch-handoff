@@ -69,5 +69,24 @@ def main(work):
     if not ok: sys.exit(1)
 
 
+
+
+def put_dialogue(work):
+    """自訂對話框（tools/dialogue_html.py）：只 PUT /interface，寫完讀回核對，簡介被改掉就提醒。
+      python3 tools/title_push.py dialogue handoff|start"""
+    from dialogue_html import PAGES
+    state_file = os.path.join(R, 'larch.json') if work == 'handoff' else os.path.join(START, 'assets/title.json')
+    url = f"{API}/{json.load(open(state_file))['project_id']}"
+    _, cur = req('GET', url); p = cur.get('project', cur)
+    old = (((p.get('settings') or {}).get('customInterfaces') or {}).get('dialogue') or {}).get('html') or ''
+    req('PUT', url + '/interface', {'surface': 'dialogue', 'html': PAGES[work], 'enabled': True, 'expectedHtml': old,
+                                    'summary': '自訂對話框：不擋 CG' + ('（信紙卡）' if work == 'handoff' else '（貼底字幕帶）')})
+    _, back = req('GET', url); bp = back.get('project', back)
+    ok = ((bp['settings'].get('customInterfaces') or {}).get('dialogue') or {}).get('html') == PAGES[work]
+    if bp.get('description') != p.get('description'): print('注意：簡介跟寫入前不一樣了，要重推')
+    print(work, '對話框讀回核對', '通過' if ok else '失敗')
+    if not ok: sys.exit(1)
+
+
 if __name__ == '__main__':
-    main(sys.argv[1])
+    put_dialogue(sys.argv[2]) if sys.argv[1] == 'dialogue' else main(sys.argv[1])

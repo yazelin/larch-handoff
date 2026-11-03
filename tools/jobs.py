@@ -331,8 +331,10 @@ day. In the foreground CHENG ZHEN (17), in a deep red singlet, crosses the finis
 other runners behind her. In the upper right, small in the spectator stand, LIN XIANGWAN is on her feet shouting with both hands
 around her mouth, and CHENG CHE beside her pats her shoulder."""),
     "NS02a": cg([("zhen", 17, 17), ("boy", 18, 18)], f"""Scene: {ENTRY}, the front door just opened, evening light. CHENG ZHEN (17)
-in casual clothes stands inside, very nervous, glancing back. Behind her in the doorway THE SENIOR BOY bows deeply and stiffly,
-holding a box of fruit as a gift. Shoes being taken off on the tiled floor."""),
+in a casual T-shirt and jeans, a backpack on her back, has just stepped inside and stands in the entryway facing into the house, very
+nervous, glancing back over her shoulder at the boy behind her. Hands, written exactly: both of her hands hold the two shoulder straps
+of her backpack in front of her chest, fingers curled around the straps, both hands fully visible. Behind her in the doorway THE SENIOR
+BOY bows deeply and stiffly, holding a box of fruit with both hands as a gift. Shoes being taken off on the tiled floor."""),
     "NS02b": cg([("zhen", 17, 17), ("girl", 18, 18), ("lin", 45, 45)], f"""Scene: {ENTRY}, the front door just opened, evening light.
 CHENG ZHEN (17) stands inside, very nervous. Behind her THE SENIOR GIRL bows stiffly, holding a box of fruit. LIN XIANGWAN (45) has
 just stepped forward and is holding out a pair of guest slippers toward the girl with both hands, a warm natural smile."""),
