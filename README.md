@@ -12,7 +12,10 @@
 - 查證紀錄：完成（`canon/查證紀錄.md`）。
 - CG 清單與年紀表：第一版（`canon/CG清單.md`）。
 - 視覺小說劇本草稿：由文字自動組成（`canon/劇本草稿.md`）。
-- 定錨、CG、音樂、放進 Larch：進行中。
+- 定錨 19 張、CG 73 張：完成。
+- 配樂四首：完成（gemini-web 生成，`assets/audio/`）。音效（口令、槍聲）還沒做。
+- Larch：已推成私人專案，還沒上架（`tools/push.py`）。
+- 公開站：https://yazelin.github.io/larch-handoff/ （首頁、原聲帶、查證紀錄，原始檔在 `docs/`）。
 
 ## 檔案
 
@@ -35,6 +38,11 @@
 | `tools/sheet.py` | 把幾張圖排成一列檢查用 |
 | `assets/art/cg/upstream/` | 沿用上篇的 CG（販賣機、終點線後的對望） |
 | `tools/cg_jobs.py`、`tools/jobs.py` | 產圖工具與工作定義 |
+| `tools/music.py` | 配樂：產生、切循環版、做原聲帶用的完整版 |
+| `tools/push.py` | 推上 Larch 私人專案（素材走 jsDelivr 孤兒 tag） |
+| `tools/build_site.py` | 公開站的查證紀錄頁；`--tag` 打公開站素材的 tag |
+| `assets/audio/` | 配樂：`bgm-*.mp3` 遊戲用循環版、`full/` 原聲帶完整版 |
+| `docs/` | 公開站（GitHub Pages） |
 
 ## 重新產生劇本草稿與 Larch 專案檔
 
