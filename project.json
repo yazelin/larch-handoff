@@ -22,7 +22,10 @@
         "id": "l0",
         "speaker": "",
         "text": "程真：",
-        "background": "assets/art/cg/C01_v1.webp"
+        "background": "assets/art/cg/C01_v1.webp",
+        "bgm": "assets/audio/bgm-theme.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
        },
        {
         "id": "l1",
@@ -260,6 +263,9 @@
       "characterLayers": [],
       "voiceMode": "off",
       "background": "assets/art/cg/C01_v1.webp",
+      "bgm": "assets/audio/bgm-theme.mp3",
+      "bgmVolume": 0.5,
+      "bgmLoop": true,
       "transition": "fade",
       "transitionMs": 1200,
       "start": true
@@ -308,7 +314,10 @@
         "id": "l0",
         "speaker": "",
         "text": "你們倆窩在沙發上，爸爸正在陪妳練習畢業典禮要說的話。妳突然站起來，挺著小肚子，很大聲地說：「我長大要跑得跟媽媽一樣快！」爸爸在旁邊小聲提醒：「要說比媽媽快。」妳想了一下，又說了一次：「我長大要跑得比媽媽快！」",
-        "background": "assets/art/cg/N01_v1.webp"
+        "background": "assets/art/cg/N01_v1.webp",
+        "bgm": "assets/audio/bgm-normal.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
        },
        {
         "id": "l1",
@@ -380,7 +389,10 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/N01_v1.webp"
+      "background": "assets/art/cg/N01_v1.webp",
+      "bgm": "assets/audio/bgm-normal.mp3",
+      "bgmVolume": 0.5,
+      "bgmLoop": true
      }
     },
     {
@@ -659,7 +671,10 @@
         "id": "l0",
         "speaker": "",
         "text": "牆上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
-        "background": "assets/art/cg/T01_v1.webp"
+        "background": "assets/art/cg/T01_v1.webp",
+        "bgm": "assets/audio/bgm-tragic.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
        },
        {
         "id": "l1",
@@ -779,7 +794,10 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/T01_v1.webp"
+      "background": "assets/art/cg/T01_v1.webp",
+      "bgm": "assets/audio/bgm-tragic.mp3",
+      "bgmVolume": 0.5,
+      "bgmLoop": true
      }
     },
     {
@@ -899,7 +917,10 @@
         "id": "l0",
         "speaker": "",
         "text": "鏡子裡的我，看起來跟每一個媽媽都一樣。可是我知道，這封信裡寫的程真，從來沒有來過。",
-        "background": "assets/art/cg/F01_v1.webp"
+        "background": "assets/art/cg/F01_v1.webp",
+        "bgm": "assets/audio/bgm-fantasy.mp3",
+        "bgmVolume": 0.5,
+        "bgmLoop": true
        },
        {
         "id": "l1",
@@ -1123,7 +1144,10 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/F01_v1.webp"
+      "background": "assets/art/cg/F01_v1.webp",
+      "bgm": "assets/audio/bgm-fantasy.mp3",
+      "bgmVolume": 0.5,
+      "bgmLoop": true
      }
     },
     {

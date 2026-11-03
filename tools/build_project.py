@@ -11,6 +11,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cg_jobs import latest
 
+BGM = {"主題曲": "theme", "主題曲・正常線版（溫暖）": "normal", "主題曲・悲劇線版（只剩鋼琴）": "tragic", "主題曲・幻想線版（空靈）": "fantasy"}
 UPSTREAM = {"C04": "assets/art/cg/upstream/cg-vending.webp", "F04": "assets/art/cg/upstream/cg-gaze.webp"}
 
 
@@ -22,7 +23,7 @@ def cg_path(cid):
 
 def parse():
     """回傳段落清單：[{title, lines:[{text, background?}], choice?:[...], transition?}]"""
-    secs = []; cur = None; pending_bg = None; pending_tr = False
+    secs = []; cur = None; pending_bg = None; pending_tr = False; pending_bgm = None
     for raw in open(os.path.join(R, "canon", "劇本草稿.md")).read().split("\n\n"):
         t = raw.strip()
         if not t or t.startswith("# ") or t == "---" or t.startswith("自動由") or t.startswith("音樂（"): continue
@@ -33,9 +34,12 @@ def parse():
         if t.startswith("【選項】"):
             cur["choice"] = t.split("：", 1)[1].split("／"); cur["prompt"] = t[4:].split("：", 1)[0]; continue
         if t.startswith("【轉場】"): pending_tr = True; continue
-        if t.startswith("【"): continue   # BGM、音效：音樂還沒做
+        if t.startswith("【BGM】"):
+            pending_bgm = f"assets/audio/bgm-{BGM[t[5:].strip()]}.mp3"; continue
+        if t.startswith("【"): continue   # 音效還沒做
         line = {"text": t}
         if pending_bg: line["background"] = pending_bg; pending_bg = None
+        if pending_bgm: line["bgm"] = pending_bgm; pending_bgm = None
         cur["lines"].append(line)
     return secs
 
@@ -46,11 +50,13 @@ def build():
 
     def card(sid, sec, start=False):
         lines = sec["lines"]; bg = next((l["background"] for l in lines if "background" in l), None)
-        dl = [{"id": f"l{i}", "speaker": "", "text": l["text"], **({"background": l["background"]} if "background" in l else {})}
+        dl = [{"id": f"l{i}", "speaker": "", "text": l["text"], **({"background": l["background"]} if "background" in l else {}),
+               **({"bgm": l["bgm"], "bgmVolume": 0.5, "bgmLoop": True} if "bgm" in l else {})}
               for i, l in enumerate(lines)]
         d = {"type": "dialogue", "title": sec["title"], "speaker": "", "text": dl[0]["text"], "dialogueLines": dl,
              "stage": {"actors": []}, "characterLayers": [], "voiceMode": "off"}
         if bg and "background" in dl[0]: d["background"] = bg
+        if "bgm" in dl[0]: d.update(bgm=dl[0]["bgm"], bgmVolume=0.5, bgmLoop=True)
         if sec.get("transition") or start: d.update(transition="fade", transitionMs=1200)
         if start: d["start"] = True
         nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": len(nodes) % 3 * 260}, "data": d}); x[0] += 420

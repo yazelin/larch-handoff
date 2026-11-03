@@ -1,0 +1,116 @@
+/* 兩個主題各自的長相（顏色在 site.css 的 token；這裡是字、形狀與點綴）。放在頁面樣式之後載入。 */
+
+/* ═════════ 程徹版：海軍藍、紅色 PU 跑道、白線、銀灰；粗體斜切、號碼布 ═════════ */
+:root[data-skin="cheng"] :is(h2.ttl,.thesis,.who h3,.m h4,.route h3,.mech-h,.end h4,.stop .sh b,.lock b,.hero h1,#title,.brand,.fork b){
+  font-family:var(--f-head);font-weight:900;font-style:italic;letter-spacing:.01em}
+:root[data-skin="cheng"] .hero h1{font-size:clamp(44px,6vw,76px);line-height:1.1;letter-spacing:-.005em}
+:root[data-skin="cheng"] .hero h1::after{content:"";display:block;width:190px;height:9px;margin:18px 0 0 4px;transform:skewX(-24deg);
+  background:linear-gradient(90deg,var(--track) 0 62%,transparent 62% 67%,var(--track) 67% 80%,transparent 80% 85%,var(--silver) 85%)}
+:root[data-skin="cheng"] h2.ttl::after{content:"";display:block;width:56px;height:5px;margin-top:14px;background:var(--track);transform:skewX(-24deg)}
+:root[data-skin="cheng"] .eyebrow{font-weight:700;letter-spacing:.28em}
+/* 號碼布：白底、黑字、四角別針 */
+:root[data-skin="cheng"] .lane{position:relative;min-width:46px;height:30px;padding:0 10px;border-radius:3px;background-color:#fff;color:#111a30;rotate:-2deg;
+  font:italic 900 16px/1 var(--f-head);box-shadow:0 0 0 1px #c3ccd9,0 4px 10px -5px rgb(16 26 50/.55);
+  background-image:radial-gradient(circle at 5px 5px,#8d99ad 1.5px,transparent 2px),radial-gradient(circle at calc(100% - 5px) 5px,#8d99ad 1.5px,transparent 2px),
+    radial-gradient(circle at 5px calc(100% - 5px),#8d99ad 1.5px,transparent 2px),radial-gradient(circle at calc(100% - 5px) calc(100% - 5px),#8d99ad 1.5px,transparent 2px)}
+:root[data-skin="cheng"] .btn{border-radius:3px;clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);padding:0 34px;font-weight:700;letter-spacing:.12em}
+:root[data-skin="cheng"] .btn.primary{box-shadow:none}
+:root[data-skin="cheng"] .btn.ghost,:root[data-skin="cheng"] .btn[aria-disabled="true"]{box-shadow:none}
+:root[data-skin="cheng"] .top nav a.ost{border-radius:3px;clip-path:polygon(8px 0,100% 0,calc(100% - 8px) 100%,0 100%);padding:6px 18px;font-weight:700;font-style:italic}
+:root[data-skin="cheng"] :is(.who,.m,.end,.lic,.locks,.fork div,#side){border-radius:8px}
+:root[data-skin="cheng"] .m .mi,:root[data-skin="cheng"] .shot,:root[data-skin="cheng"] .shot .ph{border-radius:4px}
+:root[data-skin="cheng"] .who.cheng{--wash:color-mix(in srgb,var(--sky) 34%,transparent)}
+:root[data-skin="cheng"] .chip{border-radius:2px;font-weight:600}
+:root[data-skin="cheng"] .stop::before{border-radius:2px;rotate:45deg}
+:root[data-skin="cheng"] .startline{height:22px}
+:root[data-skin="cheng"] .startline::before{height:4px}
+/* 玩法與主題、原聲帶兩段：深夜藍的帶狀區，白線斜紋 */
+:root[data-skin="cheng"] :is(#play-sec,#ost){
+  --paper:#0a1122; --paper-rgb:10 17 34; --paper-2:#101a30; --card:#142039;
+  --ink:#eaf0f8; --ink-2:#aab6c9; --ink-3:#6f7c93;
+  --track:#e0432a; --track-ink:#fff; --accent:#ff7a5e;
+  --sky:#6fa8e8; --sky-2:#1a2a4a; --navy:#b9c9e6; --tape:#3b4966; --line:#22304b; --shadow:0 0 0;
+  color:var(--ink);
+  background:repeating-linear-gradient(115deg,transparent 0 44px,rgba(255,255,255,.028) 44px 46px),var(--band);
+  border-top:4px solid var(--track)}
+:root[data-skin="cheng"] #ost{background:linear-gradient(180deg,var(--band-2),var(--band));border-top:0}
+:root[data-skin="cheng"] .ost-list a:hover{background:rgba(255,255,255,.04)}
+:root[data-skin="cheng"] .thesis em{color:var(--accent)}
+:root[data-skin="cheng"] .ecg path{stroke-width:2.4}
+:root[data-skin="cheng"] .skin button[aria-pressed="true"]{font-weight:700}
+
+/* ═════════ 林向晚版：櫻花粉、玫瑰霧粉、奶油米、淡紫；圓潤、花瓣與光斑、紙膠帶 ═════════ */
+:root[data-skin="lin"] :is(h2.ttl,.thesis,.who h3,.m h4,.route h3,.mech-h,.end h4,.stop .sh b,.lock b,.hero h1,#title,.brand,.fork b,.lb-cap){
+  font-family:var(--f-head);font-weight:400;letter-spacing:.05em}
+:root[data-skin="lin"] body{
+  background:
+    radial-gradient(900px 620px at 88% 6%,color-mix(in srgb,var(--track) 26%,transparent),transparent 62%),
+    radial-gradient(760px 560px at 4% 42%,color-mix(in srgb,var(--sky) 22%,transparent),transparent 62%),
+    radial-gradient(820px 620px at 92% 78%,color-mix(in srgb,#ffd9c7 30%,transparent),transparent 62%),
+    var(--paper);
+  background-attachment:fixed}
+:root[data-skin="lin"] .hero h1 span:last-child{color:var(--accent)}
+:root[data-skin="lin"] .hero::after{content:"";position:absolute;inset:0;pointer-events:none;mix-blend-mode:screen;opacity:.55;
+  background:radial-gradient(circle at 58% 14%,rgba(255,255,255,.9) 0 3px,transparent 9px),radial-gradient(circle at 66% 30%,rgba(255,230,240,.8) 0 5px,transparent 14px),
+    radial-gradient(circle at 82% 10%,rgba(255,255,255,.75) 0 4px,transparent 12px),radial-gradient(circle at 94% 36%,rgba(255,220,235,.8) 0 6px,transparent 18px),
+    radial-gradient(circle at 74% 52%,rgba(255,255,255,.6) 0 2px,transparent 7px),radial-gradient(ellipse 60% 50% at 80% 20%,rgba(255,190,215,.22),transparent 70%)}
+:root[data-skin="lin"] .lane{border-radius:99px;padding:0 12px;box-shadow:0 4px 12px -6px rgb(var(--shadow)/.6);
+  background:linear-gradient(135deg,var(--track),var(--sky));color:var(--track-ink)}
+:root[data-skin="lin"] .btn.primary{background:linear-gradient(135deg,var(--track),var(--sky));color:var(--track-ink);box-shadow:0 12px 28px -12px rgb(var(--shadow)/.85)}
+:root[data-skin="lin"] .top nav a.ost{background:linear-gradient(135deg,var(--track),var(--sky));color:var(--track-ink)}
+:root[data-skin="lin"] :is(.who,.m,.end,.lic){border-radius:28px}
+:root[data-skin="lin"] .locks{border-radius:28px}
+:root[data-skin="lin"] :is(.m,.who,.shot){box-shadow:inset 0 0 0 1px rgba(255,255,255,.5),0 24px 46px -30px rgb(var(--shadow)/.7)}
+:root[data-skin="lin"] .shot{border-radius:14px;padding:9px 9px 0}
+:root[data-skin="lin"] .shot .ph{border-radius:9px}
+:root[data-skin="lin"] .shot:nth-child(odd){rotate:-.7deg}
+:root[data-skin="lin"] .shot:nth-child(even){rotate:.6deg}
+:root[data-skin="lin"] .shot.big{rotate:0deg}
+:root[data-skin="lin"] .shot:hover{transform:translateY(-5px) rotate(.8deg)}
+:root[data-skin="lin"] .fork div,:root[data-skin="lin"] #side{border-radius:22px}
+:root[data-skin="lin"] .chip{border-radius:99px;background:color-mix(in srgb,var(--track) 16%,var(--card))}
+:root[data-skin="lin"] .who.lin{order:-1}
+:root[data-skin="lin"] .who.cheng{--wash:color-mix(in srgb,var(--sky) 30%,transparent)}
+:root[data-skin="lin"] #play-sec{background:linear-gradient(180deg,var(--band),var(--band-2))}
+/* 紙膠帶 */
+:root[data-skin="lin"] .shot::before,:root[data-skin="lin"] .who::after{content:"";position:absolute;z-index:2;top:-9px;left:50%;width:74px;height:20px;translate:-50% 0;rotate:-3deg;opacity:.88;
+  background:repeating-linear-gradient(45deg,var(--tape) 0 6px,color-mix(in srgb,var(--tape) 60%,#fff) 6px 12px);
+  -webkit-mask:linear-gradient(90deg,transparent 0 2px,#000 2px calc(100% - 2px),transparent 0);mask:linear-gradient(90deg,transparent 0 2px,#000 2px calc(100% - 2px),transparent 0)}
+:root[data-skin="lin"] .shot:nth-child(3n+2)::before{background:repeating-linear-gradient(90deg,#efe4fb 0 5px,#fff 5px 10px);rotate:4deg;left:30%}
+:root[data-skin="lin"] .shot:nth-child(3n)::before{background:radial-gradient(circle,#f6a3bf 1.6px,transparent 2px) 0 0/8px 8px,#fff4f7;rotate:-5deg;left:68%}
+:root[data-skin="lin"] .who::after{top:12px;left:auto;right:24px;translate:none;rotate:6deg}
+:root[data-skin="lin"] .excerpt{border-radius:14px;rotate:-.6deg;background-image:radial-gradient(color-mix(in srgb,var(--track) 40%,transparent) 1.1px,transparent 1.4px);background-size:20px 20px;background-position:0 0}
+:root[data-skin="lin"] .excerpt::before{background:repeating-linear-gradient(45deg,var(--tape) 0 6px,color-mix(in srgb,var(--tape) 60%,#fff) 6px 12px)}
+:root[data-skin="lin"] .lanes::before{background-image:radial-gradient(circle,rgba(255,255,255,.95) 2.4px,transparent 2.9px);background-size:24px 16px;background-position:center}
+:root[data-skin="lin"] .startline{background:linear-gradient(90deg,var(--track),var(--sky))}
+:root[data-skin="lin"] .startline::before{background:repeating-linear-gradient(90deg,rgba(255,255,255,.95) 0 14px,transparent 14px 22px)}
+:root[data-skin="lin"] .startline span{background:transparent}
+:root[data-skin="lin"] .m .mi .tag2{border-radius:99px}
+@media (max-width:760px){:root[data-skin="lin"] .shot:nth-child(n){rotate:0deg}}
+
+/* 飄落的花瓣：只在林向晚版出現；減少動態時不出現 */
+.petals{position:fixed;inset:0;pointer-events:none;z-index:40;overflow:hidden;display:none}
+:root[data-skin="lin"] .petals{display:block}
+.petals i{position:absolute;top:-24px;left:var(--x);width:var(--s);height:calc(var(--s) * .72);border-radius:100% 0 100% 0;opacity:.55;
+  background:linear-gradient(135deg,#ffe3ec,#f6a3bf 70%);box-shadow:0 1px 2px rgb(190 110 150/.25);
+  animation:petal var(--d) linear var(--dl) infinite}
+@keyframes petal{0%{transform:translate(0,0) rotate(0deg)}50%{transform:translate(calc(var(--dx) * .5),55vh) rotate(260deg)}100%{transform:translate(var(--dx),112vh) rotate(540deg)}}
+@media (prefers-reduced-motion:reduce){.petals{display:none!important}}
+
+/* ── 原聲帶播放器 ── */
+:root[data-skin="cheng"] #no{font:italic 900 14px/1 var(--f-head);letter-spacing:.18em}
+:root[data-skin="cheng"] .cv{border-radius:3px;rotate:-2.5deg}
+:root[data-skin="cheng"] #sidehead b{font-weight:900;font-style:italic;font-family:var(--f-head)}
+:root[data-skin="lin"] .cv{border-radius:16px;rotate:2deg;padding:9px}
+:root[data-skin="lin"] .cv img{border-radius:10px}
+:root[data-skin="lin"] .cv::before{background:repeating-linear-gradient(45deg,var(--tape) 0 6px,color-mix(in srgb,var(--tape) 60%,#fff) 6px 12px)}
+:root[data-skin="lin"] #play{background:linear-gradient(135deg,var(--track),var(--sky))}
+:root[data-skin="lin"] #sidehead b{font-family:var(--f-head)}
+:root[data-skin="cheng"] .btn.ghost{background:var(--ink);color:var(--paper)}
+:root[data-skin="cheng"] .btn[aria-disabled="true"]{background:color-mix(in srgb,var(--ink) 12%,var(--paper));color:var(--ink-2)}
+:root[data-skin="lin"] .btn[aria-disabled="true"]{background:color-mix(in srgb,var(--track) 18%,var(--card));color:var(--ink-2);box-shadow:inset 0 0 0 1px var(--line)}
+
+/* 首屏引句：兩人各一句（都取自原文），跟著主題換 */
+.for-lin{display:none}
+html[data-skin="lin"] .for-cheng{display:none}
+html[data-skin="lin"] .for-lin{display:inline}
