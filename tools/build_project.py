@@ -74,7 +74,7 @@ def build():
 
     tr = by["共同段落"]; last = tr["lines"].pop()
     t = card("trunk", tr, start=True)
-    SAVE_HINT = "\n\n（建議存檔後再選。）"   # 作者 2026-11-03 要求
+    SAVE_HINT = "\n\n（三條線從這裡分開，建議存檔後再選。）"   # 作者 2026-11-03 要求
     c = choice("pick-look", tr, tr["choice"], last["text"] + SAVE_HINT, last.get("background")); edge(t, c)
     branches = [("normal", "客廳線"), ("tragic", "照片線"), ("fantasy", "鏡子線")]
     for i, (key, name) in enumerate(branches):

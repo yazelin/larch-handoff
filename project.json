@@ -281,7 +281,7 @@
      "data": {
       "type": "choice",
       "title": "抬頭看向",
-      "text": "寫到這裡，我停下筆，抬頭看了一眼——\n\n（建議存檔後再選。）",
+      "text": "寫到這裡，我停下筆，抬頭看了一眼——\n\n（三條線從這裡分開，建議存檔後再選。）",
       "background": "assets/art/cg/C28_v1.webp",
       "choices": [
        "房門外的客廳",

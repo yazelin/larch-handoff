@@ -66,7 +66,7 @@ START = '''<style>
 * { box-sizing: border-box; }
 body { margin: 0; background: transparent; }
 .dlg { position: relative; padding: 4.5em 6vw 2.2vh;
-  background: linear-gradient(0deg, rgba(6,10,22,.62) 0%, rgba(6,10,22,.34) 55%, rgba(6,10,22,0) 100%); transition: opacity .35s;
+  background: linear-gradient(0deg, rgba(6,10,22,0) 0%, rgba(6,10,22,.55) 22%, rgba(6,10,22,.32) 60%, rgba(6,10,22,0) 100%);   /* 底邊也淡掉，不在工具列上緣切出一條線 */ transition: opacity .35s;
   -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%);
           mask-image: linear-gradient(90deg, transparent 0, #000 12%, #000 88%, transparent 100%); }
 .row { display: flex; align-items: flex-end; gap: 14px; max-width: 1200px; margin: 0 auto; }
