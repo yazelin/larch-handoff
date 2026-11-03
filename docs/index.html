@@ -35,7 +35,39 @@
 .credits{display:grid;gap:18px;margin:0}
 .credits div{display:grid;grid-template-columns:7em 1fr;gap:12px}
 .credits dt{color:var(--ink-3)}.credits dd{margin:0}
-@media (max-width:520px){.credits div{grid-template-columns:1fr;gap:2px}.top nav a{padding:6px 8px}}
+@media (max-width:720px){.credits div{grid-template-columns:1fr;gap:2px}.top .in{gap:10px}.brand span{white-space:nowrap}.top nav{overflow-x:auto;white-space:nowrap;scrollbar-width:none;min-width:0}.top nav::-webkit-scrollbar{display:none}.top nav a{padding:6px 8px;flex:none}}
+.sub{font-family:var(--f-serif);color:var(--ink-2);font-size:16px;line-height:1.9;max-width:40em;margin:0 0 28px}
+.cards3{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px;margin:24px 0}
+.card{background:var(--card);border-radius:6px;padding:18px 20px;box-shadow:0 1px 0 var(--line),0 12px 28px -18px rgb(var(--shadow)/.5)}
+.card b{display:block;font-family:var(--f-display);font-weight:400;font-size:20px;margin:0 0 6px}
+.card p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.8}
+.card .k{font-size:13px;color:var(--accent);letter-spacing:.12em;margin:0 0 4px}
+.people{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.person{background:var(--card);border-radius:6px;overflow:hidden;box-shadow:0 12px 28px -18px rgb(var(--shadow)/.5)}
+.person .ages{display:flex;gap:2px;background:var(--paper-2)}
+.person .ages figure{flex:1;margin:0;text-align:center}
+.person .ages img{width:100%;aspect-ratio:3/5;object-fit:contain;object-position:50% 100%;display:block;padding:8px 4px 0}
+.person .ages figcaption{font-size:12px;color:var(--ink-3);padding:4px 0}
+.person .txt{padding:16px 20px 20px}.person h3{margin:0 0 6px;font-family:var(--f-display);font-weight:400;font-size:24px}
+.person p{margin:0;color:var(--ink-2);font-size:15px;line-height:1.85}
+.tl{list-style:none;margin:0;padding:0;border-left:3px solid var(--accent);max-width:40em}
+.tl li{position:relative;padding:0 0 18px 22px}.tl li::before{content:"";position:absolute;left:-8px;top:6px;width:13px;height:13px;border-radius:50%;background:var(--card);box-shadow:inset 0 0 0 3px var(--accent)}
+.tl b{display:block;font-size:15px}.tl span{color:var(--ink-2);font-size:14.5px}
+details.spoil{margin:16px 0;background:var(--card);border-radius:6px;box-shadow:inset 0 0 0 1px var(--line)}
+details.spoil summary{cursor:pointer;padding:14px 18px;font-weight:500;list-style:none}
+details.spoil summary::after{content:"　展開";color:var(--accent);font-size:13px}
+details.spoil[open] summary::after{content:"　收起"}
+details.spoil > div{padding:0 18px 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:10px}
+.grid figure{margin:0}.grid img{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:4px;display:block;cursor:zoom-in}
+.grid figcaption{font-size:12.5px;color:var(--ink-2);padding:4px 2px 0;line-height:1.5}
+#lb{position:fixed;inset:0;z-index:50;background:rgb(0 0 0/.88);display:none;align-items:center;justify-content:center;flex-direction:column;padding:16px}
+#lb.on{display:flex}#lb img{max-width:100%;max-height:82vh;border-radius:4px}#lb p{color:#eee;margin:12px 0 0;font-size:15px;text-align:center}
+.tracks{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:20px 0}
+.tracks a{display:block;text-decoration:none;color:inherit;background:var(--card);border-radius:6px;overflow:hidden;box-shadow:0 12px 28px -18px rgb(var(--shadow)/.5)}
+.tracks img{width:100%;aspect-ratio:16/9;object-fit:cover;display:block}.tracks div{padding:10px 14px 14px}.tracks b{display:block}.tracks span{font-size:13px;color:var(--ink-2)}
+.notes h3{font-family:var(--f-display);font-weight:400;font-size:21px;margin:30px 0 8px}.notes p,.notes li{font-family:var(--f-serif);color:var(--ink-2);line-height:1.95;font-size:16px}
+.notes ul{padding-left:1.2em;margin:0}
 </style>
 </head>
 <body>
@@ -44,8 +76,12 @@
     <a class="brand" href="#"><i aria-hidden="true"></i><span>交棒總在終點後</span></a>
     <nav aria-label="頁面導覽">
       <a href="#story">故事</a>
+      <a href="#read">怎麼讀</a>
+      <a href="#people">人物</a>
+      <a href="#gallery">圖庫</a>
       <a href="music/">原聲帶</a>
-      <a href="sources/">查證紀錄</a>
+      <a href="#making">製作</a>
+      <a href="sources/">查證</a>
     </nav>
   </div>
 </header>
@@ -78,17 +114,133 @@
   </div>
 </section>
 
+<section class="blk" id="read" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">怎麼讀</p>
+    <h2 class="ttl">一封信，抬頭看一眼，三種寫法</h2>
+    <p class="sub">整部作品就是林向晚寫給女兒的一封信，沒有旁白，也沒有讀信的人，你直接讀。信寫到一半，她停下筆，抬頭看了一眼。這時候由你決定她看向哪裡，信接下來就照那個方向寫完。三條線從這裡分開，彼此互不影響，建議在這裡先存檔。</p>
+    <div class="cards3">
+      <div class="card"><p class="k">房門外的客廳</p><b>客廳線</b><p>客廳裡，爸爸正陪程真練習畢業典禮要說的話。信照原本的樣子寫完，後面還有一封，寫在程真十七歲那年。</p></div>
+      <div class="card"><p class="k">床頭櫃上的照片</p><b>照片線</b><p>床頭櫃上，是程徹大學最後一場接力賽的照片。信換了一種寫法，後面也還有一封。</p></div>
+      <div class="card"><p class="k">化妝台上的鏡子</p><b>鏡子線</b><p>鏡子裡的向晚，看起來跟每一個媽媽都一樣。這條線的信，寫的是她一直沒有說出口的事，後面也還有一封。</p></div>
+    </div>
+    <p class="sub">每條線的第一封信讀完，畫面會暗下來，接一張轉場的圖，再讀那條線的第二封信。客廳線的第二封信裡還有一個選擇。三條線全部讀完，大約半小時。</p>
+    <p class="notice">照片線寫的是失去親人以後撐不下去的心情，信裡沒有任何傷害自己的方法，後面那封信寫她怎麼開口求助、怎麼慢慢好起來。如果你或身邊的人覺得撐不下去，請撥打衛福部安心專線 1925，二十四小時免付費。</p>
+  </div>
+</section>
+
+<section class="blk" id="title" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">片名</p>
+    <h2 class="ttl">上篇偷跑，下篇跑過頭</h2>
+    <div class="narrow">
+      <p>上篇《起跑總在開始前》，是槍響之前就動了，田徑上叫偷跑。下篇《交棒總在終點後》，是早該交棒的地方已經過了，人還抓著棒子往前跑，接力賽裡叫出區。兩個都是犯規，一個太早，一個太晚。</p>
+      <p>照片線裡，向晚一個人扛了三年，才把一段交給外婆。鏡子線裡，那件事她扛了十幾年，才交給程徹。客廳線沒有跑過頭，她是交完棒以後，留在終點後面看著女兒往前跑的那個人。</p>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="people" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">人物</p>
+    <h2 class="ttl">一家三口，和幫忙的人</h2>
+    <div class="people">
+      <article class="person">
+        <div class="ages"><figure><img data-a="site/lin20_v1.webp" alt="二十歲的林向晚" loading="lazy"><figcaption>20</figcaption></figure><figure><img data-a="site/lin35_v1.webp" alt="三十五歲的林向晚" loading="lazy"><figcaption>35</figcaption></figure><figure><img data-a="site/lin45_v2.webp" alt="四十五歲的林向晚" loading="lazy"><figcaption>45</figcaption></figure></div>
+        <div class="txt"><h3>林向晚</h3><p>寫這封信的人。高中跑女子四百公尺，在終點線後面抬頭，跟程徹的視線撞在一起。寫信這一年三十四歲。</p></div>
+      </article>
+      <article class="person">
+        <div class="ages"><figure><img data-a="site/cheng20_v1.webp" alt="二十歲的程徹" loading="lazy"><figcaption>20</figcaption></figure><figure><img data-a="site/cheng30_v1.webp" alt="三十歲的程徹" loading="lazy"><figcaption>30</figcaption></figure><figure><img data-a="site/cheng45_v2.webp" alt="四十五歲的程徹" loading="lazy"><figcaption>45</figcaption></figure></div>
+        <div class="txt"><h3>程徹</h3><p>八百公尺選手。話很少，在乎一個人的時候不會說出來，會默默替對方把一件事做好。把一副新鑰匙放進她手心，只說了一句「多打的」。</p></div>
+      </article>
+      <article class="person">
+        <div class="ages"><figure><img data-a="site/zhen2_v1.webp" alt="兩歲的程真" loading="lazy"><figcaption>2</figcaption></figure><figure><img data-a="site/zhen6_v1.webp" alt="六歲的程真" loading="lazy"><figcaption>6</figcaption></figure><figure><img data-a="site/zhen17_v1.webp" alt="十七歲的程真" loading="lazy"><figcaption>17</figcaption></figure></div>
+        <div class="txt"><h3>程真</h3><p>收信的人，六歲，下個禮拜幼稚園畢業。名字是爸爸在一張紙上寫滿了字、一個一個劃掉，最後圈起來的。真，是真誠的真，是純真的真，也是真善美的真。</p></div>
+      </article>
+      <article class="person">
+        <div class="ages"><figure><img data-a="site/grandma47_v1.webp" alt="四十七歲的外婆" loading="lazy"><figcaption>47</figcaption></figure><figure><img data-a="site/grandma68_v1.webp" alt="六十八歲的外婆" loading="lazy"><figcaption>68</figcaption></figure></div>
+        <div class="txt"><h3>外婆</h3><p>向晚的媽媽，比向晚大三十四歲。在兩條線裡，都是那個替她多跑一段的人。</p></div>
+      </article>
+    </div>
+    <details class="spoil"><summary>讀完以後才出現的人（會透露劇情）</summary><div class="people">
+      <article class="person"><div class="ages"><figure><img data-a="site/senior_boy_v1.webp" alt="田徑隊的學長" loading="lazy"><figcaption>18</figcaption></figure></div><div class="txt"><h3>田徑隊的學長</h3><p>客廳線第二封信裡，程真帶回家吃飯的人，有兩種可能，這是其中一個。跑八百公尺，跟程徹一樣。</p></div></article>
+      <article class="person"><div class="ages"><figure><img data-a="site/senior_girl_v1.webp" alt="田徑隊的學姊" loading="lazy"><figcaption>18</figcaption></figure></div><div class="txt"><h3>田徑隊的學姊</h3><p>另一個選擇裡，程真帶回家的人。跑四百公尺，跟向晚一樣。</p></div></article>
+      <article class="person"><div class="ages"><figure><img data-a="site/adopt4_v1.webp" alt="四歲的女孩" loading="lazy"><figcaption>4</figcaption></figure></div><div class="txt"><h3>四歲的女孩</h3><p>鏡子線第二封信裡，來到這個家的孩子。見面那天，向晚問她願不願意叫程真，她想了很久，點了點頭。</p></div></article>
+    </div></details>
+  </div>
+</section>
+
+<section class="blk" id="years" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">時間</p>
+    <h2 class="ttl">從十七歲到四十五歲</h2>
+    <p class="sub">向晚和程徹同年。信裡寫到的每一件事，大概落在這些年紀。</p>
+    <ol class="tl">
+      <li><b>17 歲</b><span>高二市運會選拔賽，終點線後面的那一眼，販賣機前的十塊錢（上篇）。</span></li>
+      <li><b>19 到 21 歲</b><span>大學。誤吃蝦仁送急診、寒流裡被他塞進口袋的手、坐過站的火車、花蓮的防波堤。</span></li>
+      <li><b>24 歲</b><span>台北的小公寓，廚房裡的「我們結婚吧」。</span></li>
+      <li><b>28 歲</b><span>懷孕、第一次聽到心跳、程真出生。</span></li>
+      <li><b>29 到 31 歲</b><span>程真學會叫「媽媽」、發燒的那幾個晚上、每天早上擠到兩個人中間。</span></li>
+      <li><b>34 歲</b><span>程真六歲，坐在化妝台前寫這封信。</span></li>
+      <li><b>36 到 45 歲</b><span>三條線各自的第二封信，分別寫在程真九歲、程真來到家裡的第一個月、程真十七歲。</span></li>
+    </ol>
+  </div>
+</section>
+
+<section class="blk" id="gallery" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">圖庫</p>
+    <h2 class="ttl">七十五張水彩 CG</h2>
+    <p class="sub">照信裡的順序排。三條線的部分會透露劇情，收起來了，讀完那條線再打開。點圖可以放大。</p>
+    <div id="gal"></div>
+  </div>
+</section>
+<div id="lb" role="dialog" aria-label="放大圖片"><img alt=""><p></p></div>
+
+<section class="blk" id="ost" style="padding-top:0">
+  <div class="wrap">
+    <p class="eyebrow">原聲帶</p>
+    <h2 class="ttl">四首，一條線一首</h2>
+    <p class="sub">主題曲給共同段落，三條線各一首，第二封信沿用那條線的曲子。客廳線用吉他，照片線只有鋼琴，鏡子線是鋼片琴和音樂盒。播放時背景會換成那條線的 CG。</p>
+    <div class="tracks" id="trk"></div>
+  </div>
+</section>
+
 <section class="blk" id="making" style="padding-top:0">
   <div class="wrap">
     <p class="eyebrow">製作</p>
     <h2 class="ttl">誰做了什麼</h2>
     <dl class="credits">
-      <div><dt>故事</dt><dd>林亞澤構思，逐段決定每條線怎麼走；文字由 AI 照作者的決定起草，作者逐句改定。</dd></div>
+      <div><dt>故事</dt><dd>林亞澤構思，三條線怎麼走、每一句留不留，由作者決定；文字由 AI 照作者的決定起草，作者逐句改定。</dd></div>
       <div><dt>美術</dt><dd>CG 由 AI 生成，畫風沿用上篇的柔和水彩；有兩張直接沿用上篇。</dd></div>
       <div><dt>原聲帶</dt><dd>四首都用 Gemini 的音樂生成功能做成。</dd></div>
       <div><dt>查證</dt><dd>寫信時用到的醫療、法規、田徑規則都查過並附上來源，整理在<a href="sources/">查證紀錄</a>。</dd></div>
       <div><dt>平台</dt><dd><a href="https://larch.ink/" target="_blank" rel="noopener">Larch</a></dd></div>
     </dl>
+    <div class="notes">
+      <h3>文字</h3>
+      <ul>
+        <li>先寫共同段落，每一句都要三條線讀得通：同一句「他的心跳好像特別慢」，在照片線和鏡子線裡會讀出不同的意思。</li>
+        <li>寫完請兩個不同的語言模型，各讀四條路線（客廳線分學長、學姊兩條），回報看不懂、太刻意、前後矛盾的地方，照回報修了九處。</li>
+        <li>上線前又逐句重看一次，把堆得太滿的形容和刻意的比喻改掉。</li>
+      </ul>
+      <h3>美術</h3>
+      <ul>
+        <li>每個角色先畫定錨圖，一個年紀一張，每一張都拿上一個年紀當臉的依據：向晚從 13 歲畫到 45 歲，程真從 2 歲畫到 17 歲，一共 21 張。每張 CG 都把在場角色的定錨圖一起送進去，臉才不會跑掉。</li>
+        <li>每張圖都放大檢查過手、腳和鞋子。改過的有：寶寶握手指和陪產握手照信裡重畫；程真身後多出來的一隻手；腳陷進地板的兩張；最後統一每個人的鞋子，以玄關那幾雙為準。</li>
+        <li>程徹那張接力賽的照片，原本畫成掛在牆上，看起來像遺照，改成床頭櫃上的 4x6 小相框。</li>
+      </ul>
+      <h3>配樂</h3>
+      <ul>
+        <li>第一版產出來以後，請另一個模型代聽，回報用了哪些樂器：照片線混進了弦樂，客廳線沒有吉他，鏡子線沒有鋼片琴，三首都重做。</li>
+        <li>遊戲裡放的是切成約九十秒、可以無縫循環的版本，原聲帶頁放完整版。</li>
+      </ul>
+      <h3>畫面</h3>
+      <ul>
+        <li>標題畫面的封面會動：雲慢慢飄、陽光的光暈和空氣裡的浮塵在變，人物那一側不動。這是直接在封面上做的，一圈六秒，接回第一格看不出接縫。</li>
+        <li>對話框做成右下角的一張小信紙，不擋 CG；旁邊有「只看圖」鈕，可以把字收起來看整張圖。</li>
+      </ul>
+    </div>
     <div class="lic">
       <p><b>授權</b></p>
       <p>程式碼採 <a href="https://github.com/yazelin/larch-handoff/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>。故事文字、美術與原聲帶採 <a href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh-hant" target="_blank" rel="noopener">CC BY-NC 4.0</a>：可以分享與改作，請標示「林亞澤（Yaze Lin），《交棒總在終點後》」，不可用於商業用途。</p>
@@ -119,6 +271,27 @@
 </dialog>
 
 <script src="assets-site/site.js"></script>
+<script src="assets-site/tracks.js"></script>
+<script src="assets-site/gallery.js"></script>
+<script>
+(function () {
+  var g = document.getElementById("gal"), h = "";
+  (window.GALLERY || []).forEach(function (s, i) {
+    var items = s.items.map(function (it) { return '<figure><img data-a="' + it[0] + '" alt="' + it[1] + '" loading="lazy"><figcaption>' + it[1] + '</figcaption></figure>'; }).join("");
+    if (i === 0) h += '<h3 style="font-weight:500;margin:0 0 10px">' + s.name + '</h3><div class="grid">' + items + '</div>';
+    else h += '<details class="spoil"><summary>' + s.name + '（' + s.items.length + ' 張，會透露劇情）</summary><div><div class="grid">' + items + '</div></div></details>';
+  });
+  g.innerHTML = h;
+  document.getElementById("trk").innerHTML = (window.TRACKS || []).map(function (t) {
+    return '<a href="music/#' + t.n + '"><img data-a="' + t.cover + '" alt="" loading="lazy"><div><b>' + t.title + '</b><span>' + t.scene + '</span></div></a>';
+  }).join("");
+  if (window.SITE) SITE.apply(document);
+  var lb = document.getElementById("lb");
+  g.addEventListener("click", function (e) { var im = e.target.closest("img"); if (!im) return; lb.querySelector("img").src = im.src; lb.querySelector("p").textContent = im.alt; lb.classList.add("on"); });
+  lb.addEventListener("click", function () { lb.classList.remove("on"); });
+  addEventListener("keydown", function (e) { if (e.key === "Escape") lb.classList.remove("on"); });
+})();
+</script>
 
 <!-- yz-promo-footer v11 | 三件套+BMC 注意力效果 | https://github.com/yazelin/promo-footer-skill -->
 <script>

@@ -72,7 +72,32 @@ body{background:var(--paper)}
 </html>
 '''
 
+def gallery():
+    """圖庫資料：CG 清單的每一段 → docs/assets-site/gallery.js（用遊戲裡實際選定的那一版）。"""
+    import json, sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    from cg_jobs import latest
+    up = {"C04": "art/cg/upstream/cg-vending.webp", "F04": "art/cg/upstream/cg-gaze.webp"}
+    secs, cur = [], None
+    for line in open(os.path.join(R, 'canon', 'CG清單.md'), encoding='utf-8'):
+        m = re.match(r'## (.+)', line)
+        if m:
+            name = m.group(1).split('（')[0].strip()
+            cur = None if name in ('年紀時間線', '合計') else {'name': name, 'items': []}
+            if cur: secs.append(cur)
+            continue
+        m = re.match(r'\| ([A-Z]+[0-9]+[ab]?) \| ([^|]+) \|', line)
+        if cur and m:
+            cid, title = m.group(1), m.group(2).strip()
+            path = up.get(cid) or (latest('assets/art/cg', cid) and os.path.relpath(latest('assets/art/cg', cid), os.path.join(R, 'assets')))
+            if path and cid not in ('C06', 'C11'): cur['items'].append([path, title])
+    open(os.path.join(R, 'docs', 'assets-site', 'gallery.js'), 'w', encoding='utf-8').write(
+        '/* 由 tools/build_site.py 從 canon/CG清單.md 產生，路徑相對於 assets/ */\nwindow.GALLERY = ' + json.dumps(secs, ensure_ascii=False, indent=1) + ';\n')
+    return sum(len(s['items']) for s in secs)
+
+
 if __name__ == '__main__':
+    print('圖庫', gallery(), '張')
     src = open(os.path.join(R, 'canon', '查證紀錄.md'), encoding='utf-8').read()
     src = src.split('\n', 3)[3] if src.startswith('# ') else src   # 跳過標題與內部說明那段
     os.makedirs(os.path.join(R, 'docs', 'sources'), exist_ok=True)

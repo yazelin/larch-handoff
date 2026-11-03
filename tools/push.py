@@ -62,8 +62,8 @@ def all_paths():
     from cg_jobs import latest
     cover = os.path.relpath(latest('assets/art/cg', 'COVER'), ROOT)
     game = set(re.findall(r'"(assets/[^"]+)"', (ROOT / 'project.json').read_text())) | {cover}
-    site = ''.join((ROOT / 'docs' / f).read_text() for f in ('index.html', 'assets-site/tracks.js', 'music/index.html'))
-    site = {'assets/' + p for p in re.findall(r'"((?:art|audio)/[^"]+\.(?:webp|mp3))"', site)}
+    site = ''.join((ROOT / 'docs' / f).read_text() for f in ('index.html', 'assets-site/tracks.js', 'assets-site/gallery.js', 'music/index.html'))
+    site = {'assets/' + p for p in re.findall(r'"((?:art|audio|site)/[^"]+\.(?:webp|mp3))"', site)}
     return sorted(game | site), cover, sorted(site)
 
 
