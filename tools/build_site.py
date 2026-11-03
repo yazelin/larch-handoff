@@ -81,12 +81,11 @@ if __name__ == '__main__':
     if '--tag' in __import__('sys').argv:   # 公開站用到的素材照 push.py 同一套分組打 tag，網址寫進 docs/site.json
         import json, sys
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from push import cdn_map
-        text = ''.join(open(os.path.join(R, 'docs', f), encoding='utf-8').read() for f in ('index.html', 'assets-site/tracks.js', 'music/index.html'))
-        paths = sorted({'assets/' + p for p in re.findall(r'"((?:art|audio)/[^"]+\.(?:webp|mp3))"', text)})
-        urls = cdn_map(paths)
+        from push import all_paths, cdn_map
+        everything, _, paths = all_paths()
+        urls = cdn_map(everything)   # 跟遊戲同一套 tag
         sj = os.path.join(R, 'docs', 'site.json'); j = json.load(open(sj))
         j.pop('assetBase', None)
-        j['assets'] = {p[len('assets/'):]: u for p, u in sorted(urls.items())}
+        j['assets'] = {p[len('assets/'):]: urls[p] for p in paths}
         open(sj, 'w').write(json.dumps(j, ensure_ascii=False, indent=1) + '\n')
         print(len(paths), '個素材寫進 docs/site.json')

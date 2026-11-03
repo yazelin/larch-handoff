@@ -56,6 +56,17 @@ def cdn_map(paths):
     return out
 
 
+def all_paths():
+    """遊戲（project.json＋封面）與公開站用到的全部素材。兩邊都用這一份分組，同一組只會有一個 tag。"""
+    sys.path.insert(0, str(ROOT / 'tools'))
+    from cg_jobs import latest
+    cover = os.path.relpath(latest('assets/art/cg', 'COVER'), ROOT)
+    game = set(re.findall(r'"(assets/[^"]+)"', (ROOT / 'project.json').read_text())) | {cover}
+    site = ''.join((ROOT / 'docs' / f).read_text() for f in ('index.html', 'assets-site/tracks.js', 'music/index.html'))
+    site = {'assets/' + p for p in re.findall(r'"((?:art|audio)/[^"]+\.(?:webp|mp3))"', site)}
+    return sorted(game | site), cover, sorted(site)
+
+
 def jsd_tag(paths, prefix):
     """只放這組檔案的孤兒 commit，打 tag（同一組檔案同一個 tag；tag 名不用 v＋數字開頭）。"""
     env = dict(os.environ, GIT_INDEX_FILE=str(ROOT / '.git/push-index'))
@@ -73,11 +84,8 @@ def jsd_tag(paths, prefix):
 
 
 def main(summary):
-    sys.path.insert(0, str(ROOT / 'tools'))
-    from cg_jobs import latest
-    cover = os.path.relpath(latest('assets/art/cg', 'COVER'), ROOT)   # 標題畫面底圖與專案縮圖
+    paths, cover, _ = all_paths()   # cover：標題畫面底圖與專案縮圖
     text = (ROOT / 'project.json').read_text()
-    paths = sorted(set(re.findall(r'"(assets/[^"]+)"', text)) | {cover})
     urls = cdn_map(paths)
     built = json.loads(re.sub(r'"(assets/[^"]+)"', lambda m: f'"{urls[m.group(1)]}"', text))
 
