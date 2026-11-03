@@ -45,8 +45,11 @@ def jsd_tag(paths):
 
 
 def main(summary):
+    sys.path.insert(0, str(ROOT / 'tools'))
+    from cg_jobs import latest
+    cover = os.path.relpath(latest('assets/art/cg', 'COVER'), ROOT)   # 標題畫面底圖與專案縮圖
     text = (ROOT / 'project.json').read_text()
-    paths = sorted(set(re.findall(r'"(assets/[^"]+)"', text)))
+    paths = sorted(set(re.findall(r'"(assets/[^"]+)"', text)) | {cover})
     tag = jsd_tag(paths)
     cdn = f'https://cdn.jsdelivr.net/gh/{REPO}@{tag}/'
     for p in paths:
@@ -70,6 +73,9 @@ def main(summary):
     project['boards'] = built['boards']
     project['activeBoardId'] = built['boards'][0]['id']
     project.pop('nodes', None); project.pop('edges', None)
+    settings = dict(project.get('settings') or {})
+    settings['titleCoverImage'] = settings['projectThumbnail'] = cdn + cover
+    project['settings'] = settings
     req('PUT', url, {'project': project, 'summary': summary}, etag)
 
     _, back = req('GET', url)
@@ -77,6 +83,7 @@ def main(summary):
     for b, w in zip(back['boards'], built['boards']):
         if (len(b['nodes']), len(b['edges'])) != (len(w['nodes']), len(w['edges'])):
             raise SystemExit(f"讀回比對失敗：{b['id']} {len(b['nodes'])}/{len(b['edges'])} ≠ {len(w['nodes'])}/{len(w['edges'])}")
+    if back.get('settings', {}).get('projectThumbnail') != cdn + cover: raise SystemExit('讀回比對失敗：封面沒寫進去')
     print(f'推送完成：{len(paths)} 個素材（{tag}），讀回比對通過')
     _, prev = req('GET', url + '/preview?boardId=main&hours=24')
     print('預覽', prev.get('url') or prev.get('playUrl') or prev)

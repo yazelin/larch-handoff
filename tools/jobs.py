@@ -186,6 +186,12 @@ def cg(cast, scene, extra_refs=(), style=STYLE_B):
 VANITY = ("a small quiet bedroom at night, a simple light-wood vanity desk against the wall with a round mirror, a warm desk lamp, "
           "a few cosmetics bottles with blank labels, a sheet of letter paper and a pen")
 JOBS.update({
+    # 封面：標題畫面底圖與專案縮圖共用；左半留給標題與選單（同上篇構圖）。不放程徹，三條線都讀得通。
+    "COVER": cg([("lin", 35, 34), ("zhen", 6, 6)], """Scene: a red athletics track in warm late-afternoon light, just past the white
+finish line. All figures are on the RIGHT half of the picture; the LEFT half is open sky, trees and empty track lanes, quiet and uncluttered.
+LIN XIANGWAN (34) in everyday clothes crouches on one knee on the track, smiling gently, holding out a relay baton with her right hand.
+CHENG ZHEN (6), a small girl in a T-shirt and shorts, stands facing her and grasps the other end of the baton with both small hands,
+looking up at her mother with bright eyes. The baton is between them, both clearly holding it. Soft sunlight, long shadows, hopeful."""),
     "C01": cg([("lin", 35, 34)], f"""Scene: {VANITY}. LIN XIANGWAN sits at the vanity seen from behind and slightly to the side, only
 her back, shoulder, low ponytail and her right hand are visible; her face is turned down toward the paper and not visible in the
 mirror (the mirror only reflects the warm lamp and the dark room). Her right hand holds the pen over the letter paper, writing;
@@ -254,18 +260,24 @@ rests flat on the dictionary page. A mug of tea. Cozy, quiet."""),
     "C19": cg([("lin", 28, 28), ("cheng", 30, 28)], """Scene: night in bed, soft lamp light. LIN XIANGWAN, about seven months pregnant,
 sits up against the headboard in pajamas, laughing gently. CHENG CHE has just sat bolt upright beside her, his right hand flat on her
 round belly, his face anxious, asking her something. Her hands are hidden under the blanket."""),
-    "C20": cg([("lin", 28, 28), ("cheng", 30, 28)], """Scene: a hospital delivery room just after the birth, soft light, white sheets,
-medical equipment blurred in the background. LIN XIANGWAN lies exhausted on the bed, hair damp, looking up at him. CHENG CHE stands
-beside the bed in a disposable hospital gown, holding her hand with both of his hands; the back of his right hand shows several red
-marks from her grip. His eyes are completely red and wet, the first time he has cried. Do not show the birth itself or the baby's
-body; a nurse in the far background is holding a small wrapped bundle."""),
+    "C20": cg([("lin", 28, 28), ("cheng", 30, 28)], """Scene: a hospital delivery room in the first minute after the birth, soft light, white sheets,
+medical equipment blurred in the background. LIN XIANGWAN lies exhausted on the bed, hair damp with sweat, turning her face up toward him.
+CHENG CHE stands beside the bed in a disposable hospital gown, leaning toward her; his eyes are completely red and wet, tears on his face.
+Hands, written exactly: on the edge of the bed, her right hand is still squeezing his left hand hard after hours of pain. His left hand lies
+palm down; her four fingers wrap over the back of his hand and her fingertips press into it, her thumb tucked under his palm. On the back of
+his left hand, between her fingers, there are several small curved red fingernail marks. His right hand rests on the bed rail, mostly out
+of frame. Only these two clasped hands are in the middle of the picture, clearly readable. Do not show the birth itself or the baby's body;
+a nurse in the far background is holding a small wrapped bundle."""),
     "C21": cg([("lin", 28, 28), ("cheng", 30, 28)], """Scene: a hospital ward room, soft daylight. LIN XIANGWAN sits up in the bed holding
 a tiny newborn wrapped in a white swaddling blanket (only the baby's small sleeping face visible), her arms stiff and careful, her whole
 body tense, eyes wide. CHENG CHE leans in beside the bed laughing at her, but his own hands are trembling, held up near the baby
 hesitantly."""),
-    "C22": cg([], """Close-up with only hands: a tiny newborn baby's hand, wrapped in a white blanket, gripping the index finger of a
-woman's hand tightly with all its little fingers. Soft warm daylight, very gentle. Only the woman's one hand and the baby's one hand
-are visible, both anatomically correct."""),
+    "C22": cg([], """Close-up in a hospital ward on the morning after the birth: a newborn baby wrapped in a white hospital swaddle, lying on
+a white bed beside a pillow, soft window daylight. Only the baby's tiny right hand comes out of the swaddle: four tiny fingers and a small
+thumb curl tightly around one adult finger. A woman's left hand enters from the right edge of the picture: only her index finger is
+extended into the baby's grip, her other three fingers loosely curled under, her thumb resting along the side of her index finger, a plain
+sleeve of a hospital gown at her wrist. Exactly two hands are visible: the baby's one hand and the woman's one hand, both with correct
+anatomy and the right number of fingers. Very gentle, warm."""),
     "C23": cg([("lin", 28, 29), ("zhen", 2, 1)], """Scene: a small family kitchen, daytime. LIN XIANGWAN, still in an apron, crouches
 on the floor in front of a 1-year-old baby girl CHENG ZHEN who sits on a play mat looking up at her with an open mouth, babbling. Lin
 is crying and laughing at the same time, both hands covering her mouth. A plate in the sink behind her."""),
@@ -405,9 +417,12 @@ run from the corner of her eye. Nobody else in the room."""),
     "F06": cg([("lin", 20, 19)], """Scene: outside the entrance of a Taiwanese district household registration office on a bright day
 (no readable signs). LIN XIANGWAN (19) stands still on the steps looking down at a small new ID card held in both hands (the card face
 is blurred, nothing readable), her eyes full of tears and her mouth trembling into a smile."""),
-    "F07": cg([("lin", 35, 34)], """Scene: a red athletics track at dusk, a lane with a row of white hurdles; nine hurdles behind her are
-knocked over or passed, and LIN XIANGWAN (34) in everyday clothes stands still in front of the last hurdle that is still standing,
-looking at it, her back three-quarters to the viewer."""),
+    "F07": cg([("lin", 35, 34)], """Scene: an empty red athletics track at dusk, seen from the infield grass, side view along the home
+straight. All the hurdles stand in ONE lane, in a single straight line. Nine white hurdles stand upright behind her, neat and untouched,
+receding toward the left side of the picture: she has already cleared them all. LIN XIANGWAN (34) in everyday clothes stands still in
+the same lane just in front of the tenth and last hurdle, on the right side of the picture, facing it, looking at it quietly; beyond the
+last hurdle the white finish line is painted across the lanes. Every hurdle is standing upright. Her face in profile, calm and tired,
+hands hanging relaxed at her sides. Long evening shadows, warm and lonely light."""),
     "F08": cg([("lin", 28, 30), ("cheng", 30, 30)], """Scene: a bright breakfast table in the morning. CHENG CHE (30) leans toward LIN
 XIANGWAN holding his phone out to show her an article (screen is blurred), his face concerned and caring. LIN XIANGWAN holds a small
 weekly pill organizer in her hand and is nodding slowly, her eyes lowered, a guilty quiet expression."""),
