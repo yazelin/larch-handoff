@@ -347,9 +347,11 @@ BOY bows deeply and stiffly, holding a box of fruit with both hands as a gift. S
 CHENG ZHEN (17) stands inside, very nervous. Behind her THE SENIOR GIRL bows stiffly, holding a box of fruit. LIN XIANGWAN (45) has
 just stepped forward and is holding out a pair of guest slippers toward the girl with both hands, a warm natural smile."""),
     "NS03a": cg([("cheng", 45, 45), ("zhen", 17, 17), ("boy", 18, 18)], """Scene: a family dining table at dinner, dishes of home
-cooking. THE SENIOR BOY sits very straight, eyes down, eating rice carefully with chopsticks. Across from him CHENG CHE (45) sits with
-a stern serious face, arms folded. CHENG ZHEN beside the boy hides a laugh behind her hand. The mother's seat is at the near edge, out
-of frame."""),
+cooking. From left to right along the far side of the table: THE SENIOR BOY, then CHENG ZHEN, then CHENG CHE (45). THE SENIOR BOY sits
+very straight, eyes down, holding his rice bowl in his left hand and chopsticks in his right, eating carefully. CHENG CHE sits with a
+stern serious face, arms folded. CHENG ZHEN, between them, hides a laugh: hands written exactly, her right hand covers her mouth, her
+left hand rests flat on the table beside her rice bowl; her chopsticks lie across the top of her bowl, not in her hand. Every hand in
+the picture belongs to one of these three people and connects to their own arm. The mother's seat is at the near edge, out of frame."""),
     "NS03b": cg([("cheng", 45, 45), ("zhen", 17, 17), ("girl", 18, 18)], """Scene: a family dining table at dinner, dishes of home
 cooking. THE SENIOR GIRL sits very straight, eyes down, eating rice carefully with chopsticks. Across from her CHENG CHE (45) sits
 with a stern serious face, arms folded. CHENG ZHEN beside her hides a laugh behind her hand. The mother's seat is at the near edge,
