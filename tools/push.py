@@ -102,9 +102,15 @@ def main(summary):
     project['name'] = built['name']
     project['boards'] = built['boards']
     project['activeBoardId'] = built['boards'][0]['id']
+    intro = (ROOT / 'canon' / '介紹文.md').read_text(encoding='utf-8').split('\n', 1)[1].strip()   # 簡介：去掉「# …（草稿）」標題那行
+    project['description'] = re.sub(r'\n\s*---\s*\n', '\n\n', intro)
     project.pop('nodes', None); project.pop('edges', None)
     settings = dict(project.get('settings') or {})
-    settings['titleCoverImage'] = settings['projectThumbnail'] = urls[cover]
+    settings['titleCoverImage'] = urls[cover]
+    settings['projectThumbnail'] = state.get('title_loop_url') or urls[cover]   # 動態縮圖（tools/title_push.py 上傳的）
+    theme = next(n['data']['bgm'] for n in built['boards'][0]['nodes'] if n['id'] == 'trunk')
+    settings['titleScreenEnabled'] = True
+    settings['titleScreen'] = dict(settings.get('titleScreen') or {}, bgm=theme, bgmVolume=0.5)   # 標題音樂＝主題曲
     project['settings'] = settings
     req('PUT', url, {'project': project, 'summary': summary}, etag)
 
@@ -113,7 +119,9 @@ def main(summary):
     for b, w in zip(back['boards'], built['boards']):
         if (len(b['nodes']), len(b['edges'])) != (len(w['nodes']), len(w['edges'])):
             raise SystemExit(f"讀回比對失敗：{b['id']} {len(b['nodes'])}/{len(b['edges'])} ≠ {len(w['nodes'])}/{len(w['edges'])}")
-    if back.get('settings', {}).get('projectThumbnail') != urls[cover]: raise SystemExit('讀回比對失敗：封面沒寫進去')
+    bs = back.get('settings', {})
+    if bs.get('titleCoverImage') != urls[cover] or (bs.get('titleScreen') or {}).get('bgm') != theme: raise SystemExit('讀回比對失敗：封面或標題音樂沒寫進去')
+    if back.get('description') != project['description']: raise SystemExit('讀回比對失敗：簡介沒寫進去')
     print(f'推送完成：{len(paths)} 個素材，讀回比對通過')
     _, prev = req('GET', url + '/preview?boardId=main&hours=24')
     print('預覽', prev.get('url') or prev.get('playUrl') or prev)
