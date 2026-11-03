@@ -235,11 +235,12 @@ interior light, dark windows with blurred passing lights. LIN XIANGWAN, tired af
 shoulder, sports bags at their feet. He sits very still, head slightly turned toward her, awake and gentle, his left arm stiffly
 still so as not to wake her. Nobody else in this part of the carriage."""),
     "C12": cg([("lin", 24, 23), ("cheng", 24, 23)], """Scene: a small Taipei apartment at night, a narrow living room with a plain sofa,
-a television on a low cabinet showing a blurred women's athletics race on a red track (no text on screen). CHENG CHE and LIN XIANGWAN sit
-close together, snuggled side by side on the sofa, her legs tucked up beside her under a soft blanket. Hands, written exactly: his right
-arm is stretched out, his right index finger pointing at the TV, the other fingers curled; his left arm is around her shoulders and his
-left hand is hidden behind her. She hugs a cushion to her chest with both arms, laughing at him. He has a serious face as he points.
-Warm lamp light and the blue glow of the TV. Home clothes like the sweaters in images 2 and 3."""),
+a television on a low cabinet showing a blurred women's athletics race on a red track (no text on screen). CHENG CHE sits upright at one
+end of the sofa. LIN XIANGWAN sits sideways along the sofa leaning back on a cushion, her legs stretched across his lap, her feet completely
+covered by a soft blanket (no toes visible). Hands, written exactly: his right arm is stretched out toward the TV, right index finger
+pointing at it, other fingers curled; his left hand rests flat on top of the blanket over her feet, palm down, holding them warm. Her
+hands hold a mug against her chest. She is laughing at him; he has a serious face as he points. Warm lamp light and the blue glow of
+the TV. Home clothes like the sweaters in images 2 and 3."""),
     "C13": cg([("lin", 24, 24), ("cheng", 24, 24)], """Scene: exactly the same small kitchen on a rainy winter night as image 2: fogged
 window, rain, warm light, a pot on the stove with the fire off and gentle steam. LIN XIANGWAN has just turned around and holds him,
 her face buried against his chest so her eyes cannot be seen, her arms around his waist. CHENG CHE holds her, chin resting on top of
