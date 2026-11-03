@@ -6,7 +6,7 @@
   python3 tools/title_loop.py start     → ~/larch-start-line/assets/art/cover/title_loop.avif
   加 --frames 只輸出第 0、1/4、1/2 格的 PNG 檢查用
 """
-import os, sys, subprocess, tempfile, shutil
+import json, os, sys, subprocess, tempfile, shutil
 import numpy as np
 from PIL import Image
 
@@ -15,7 +15,7 @@ W, H, FPS, T = 1280, 720, 12, 6
 N = FPS * T
 # 每部的設定：來源封面、輸出、人物所在的 x 範圍（遮掉不動）、天空帶的高度、太陽位置
 PRESETS = {
-    'handoff': dict(src=os.path.join(R, 'assets/art/cg/COVER_v1.webp'), out=os.path.join(R, 'assets/art/cover/title_loop.avif'),
+    'handoff': dict(src=os.path.join(R, 'assets/art/cg', json.load(open(os.path.join(R, 'assets/art/cg/selected.json')))['COVER']), out=os.path.join(R, 'assets/art/cover/title_loop.avif'),
                     still_x=.47, sky_y=.20, sky_h=.24, sun=(.15, .10), sun_rgb=(255, 214, 150)),
     'start': dict(src=os.path.expanduser('~/larch-start-line/assets/art/cover/cover.webp'),
                   out=os.path.expanduser('~/larch-start-line/assets/art/cover/title_loop.avif'),
