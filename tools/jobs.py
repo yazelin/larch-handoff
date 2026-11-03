@@ -338,16 +338,21 @@ at his phone, but the phone screen is black. Letter writing is illegible."""),
 day. In the foreground CHENG ZHEN (17), in a deep red singlet, crosses the finish line of the women's 400m with her arms flung open,
 other runners behind her. In the upper right, small in the spectator stand, LIN XIANGWAN is on her feet shouting with both hands
 around her mouth, and CHENG CHE beside her pats her shoulder."""),
-    "NS02a": cg([("zhen", 17, 17), ("boy", 18, 18)], f"""Scene: {ENTRY}, the front door just opened, evening light. CHENG ZHEN (17)
-has just come home from track practice: she wears exactly the same outfit as in image 2, a red running singlet with white trim and
-black running shorts, a dark backpack on her back. She has just stepped inside and stands in the entryway facing into the house, very
-nervous, glancing back over her shoulder at the boy behind her. Hands, written exactly: both of her hands hold the two shoulder straps
-of her backpack in front of her chest, fingers curled around the straps, both hands fully visible. Behind her in the doorway THE SENIOR
-BOY bows deeply and stiffly, holding a box of fruit with both hands as a gift. Shoes being taken off on the tiled floor.""",
-        extra_refs=[(lambda: latest(C, "NS02b"), "the same scene in the other version of the story, use it only for CHENG ZHEN's outfit and backpack (ignore the other people in it)")]),
-    "NS02b": cg([("zhen", 17, 17), ("girl", 18, 18), ("lin", 45, 45)], f"""Scene: {ENTRY}, the front door just opened, evening light.
-CHENG ZHEN (17) stands inside, very nervous. Behind her THE SENIOR GIRL bows stiffly, holding a box of fruit. LIN XIANGWAN (45) has
-just stepped forward and is holding out a pair of guest slippers toward the girl with both hands, a warm natural smile."""),
+    # 鞋子以 NS04a／NS04b 為準（作者 2026-11-03：每個人的鞋子顏色要一致）：程真紅白跑鞋、學長深灰黑、學姊深藍配黃
+    "NS02a": cg([("zhen", 17, 17), ("boy", 18, 18)], """Keep this picture exactly the same as image 2: the same entryway, the same
+composition, the same poses, the same clothes (CHENG ZHEN in a red running singlet with white trim, black running shorts and a dark
+backpack, both hands holding the backpack straps; THE SENIOR BOY bowing in the doorway holding a box of fruit). The only change is the
+shoes, which must match image 3: on the tiled floor beside CHENG ZHEN lies the pair of red-and-white running shoes she has just taken
+off (she stands in white socks), and THE SENIOR BOY is wearing dark grey-and-black running shoes. No white sneakers on the floor.""",
+        extra_refs=[(lambda: latest(C, "NS02a"), "the picture to keep, change only the shoes"),
+                    (lambda: latest(C, "NS04a"), "the two pairs of running shoes: the red-and-white pair is CHENG ZHEN's, the dark grey-and-black pair is THE SENIOR BOY's")]),
+    "NS02b": cg([("zhen", 17, 17), ("girl", 18, 18), ("lin", 45, 45)], """Keep this picture exactly the same as image 2: the same
+entryway, the same composition, the same poses and clothes (CHENG ZHEN nervous in a red running singlet, black shorts and a dark
+backpack; THE SENIOR GIRL bowing with a box of fruit; LIN XIANGWAN (45) holding out a pair of guest slippers with both hands). The only
+change is the shoes, which must match image 3: THE SENIOR GIRL is wearing navy-blue running shoes with yellow accents, and on the tiled
+floor beside CHENG ZHEN lies the pair of red-and-white running shoes she has just taken off (she stands in white socks).""",
+        extra_refs=[(lambda: latest(C, "NS02b"), "the picture to keep, change only the shoes"),
+                    (lambda: latest(C, "NS04b"), "the two pairs of running shoes: the red-and-white pair is CHENG ZHEN's, the navy-and-yellow pair is THE SENIOR GIRL's")]),
     "NS03a": cg([("cheng", 45, 45), ("zhen", 17, 17), ("boy", 18, 18)], """Scene: a family dining table at dinner, dishes of home
 cooking. From left to right along the far side of the table: THE SENIOR BOY, then CHENG ZHEN, then CHENG CHE (45). THE SENIOR BOY sits
 very straight, eyes down, holding his rice bowl in his left hand and chopsticks in his right, eating carefully. CHENG CHE sits with a
@@ -475,4 +480,18 @@ light switch, frozen, her eyes filling with tears."""),
 red envelope (plain red, no characters) to THE GIRL (4) with both hands; the girl takes it with both hands, shy and delighted."""),
     "FS06": cg([], """Scene with NO people: on a folded handwritten letter (illegible) lies a small brand-new set of house keys with a
 little red ribbon, warm morning light on a wooden desk."""),
+})
+
+# ── 鞋子統一（作者 2026-11-03）：畫面照舊，只換鞋，作準的鞋以玄關圖為參考 ──
+def shoe_fix(name, cast, change, ref, refdesc):
+    return cg(cast, "Keep this picture exactly the same as image 2: same place, composition, poses, faces and clothes. The only change is "
+              "the footwear: " + change, extra_refs=[(lambda: latest(C, name), "the picture to keep, change only the shoes"), (lambda: latest(C, ref), refdesc)])
+JOBS.update({
+    "TS05": shoe_fix("TS05", [("lin", 35, 37)], "the pair of men's running shoes LIN XIANGWAN is putting into the shoe cabinet are the worn grey running shoes from image 3, "
+                     "the same grey pair, now clean.", "T03", "the entryway with CHENG CHE's grey running shoes (the larger pair)"),
+    "N02": shoe_fix("N02", [("zhen", 6, 6)], "the little girl CHENG ZHEN wears the small pink children's sneakers from image 3.", "N03", "the entryway; the small pink pair is CHENG ZHEN's"),
+    "N04": shoe_fix("N04", [("lin", 35, 34), ("zhen", 6, 6)], "the little girl CHENG ZHEN running on the track wears the small pink children's sneakers from image 3.",
+                    "N03", "the entryway; the small pink pair is CHENG ZHEN's"),
+    "NS01": shoe_fix("NS01", [("zhen", 17, 17), ("lin", 45, 45), ("cheng", 45, 45)], "CHENG ZHEN, crossing the finish line in the red singlet, wears the red-and-white "
+                     "running shoes from image 3.", "NS04a", "the two pairs of running shoes; the red-and-white pair is CHENG ZHEN's"),
 })
