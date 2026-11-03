@@ -3,7 +3,7 @@
 window.TRACKS = [
   { n: 1, file: "audio/full/theme.mp3", title: "A Letter at the Dresser", scene: "主題曲：信的開頭，三條線共用", dur: 165,
     line: "他叫程徹，是一個話很少的人。有一天，他把一副新鑰匙放在我手心，只說了一句：「多打的。」",
-    cover: "art/cg/C01_v1.webp", pos: "50% 50%", slides: ["art/cg/C01_v1.webp", "art/cg/C02_v1.webp", "art/cg/C10_v1.webp", "art/cg/C20_v1.webp", "art/cg/C22_v1.webp", "art/cg/C26_v1.webp", "art/cg/C28_v1.webp"] },
+    cover: "art/cg/C01_v1.webp", pos: "50% 50%", slides: ["art/cg/C01_v1.webp", "art/cg/C02_v1.webp", "art/cg/C10_v1.webp", "art/cg/C20_v4.webp", "art/cg/C22_v4.webp", "art/cg/C26_v1.webp", "art/cg/C28_v1.webp"] },
   { n: 2, file: "audio/full/normal.mp3", title: "Keys on the Hook", scene: "客廳線：房門外的客廳，和十一年後", dur: 144,
     line: "接力賽裡，交棒以後，跑完的人會停在跑道旁邊，看著下一棒越跑越遠。媽媽現在就站在那裡。",
     cover: "art/cg/N01_v1.webp", pos: "50% 50%", slides: ["art/cg/N01_v1.webp", "art/cg/N02_v1.webp", "art/cg/N04_v1.webp", "art/cg/NS01_v1.webp", "art/cg/NS05_v1.webp"] },
