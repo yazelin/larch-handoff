@@ -57,7 +57,7 @@ def build():
              "stage": {"actors": []}, "characterLayers": [], "voiceMode": "off"}
         if bg and "background" in dl[0]: d["background"] = bg
         if "bgm" in dl[0]: d.update(bgm=dl[0]["bgm"], bgmVolume=0.5, bgmLoop=True)
-        if sec.get("transition") or start: d.update(transition="fade", transitionMs=1200)
+        if start: d.update(transition="fade", transitionMs=1200)   # 後續信前面已經有 interlude 轉場，這裡不再淡入
         if start: d["start"] = True
         nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": len(nodes) % 3 * 260}, "data": d}); x[0] += 420
         return sid
@@ -68,6 +68,18 @@ def build():
             "type": "choice", "title": sec.get("prompt", "選擇"), "text": text, "background": bg, "choices": labels,
             "choiceMode": "branch", "choicePlacement": "center", "stage": {"actors": []}, "characterLayers": [], "voiceMode": "off"}})
         x[0] += 420; return sid
+
+    def interlude(sid, cg):
+        """後續信之前的轉場：全黑停兩秒 → 淡入後續第一張 CG 停兩秒半（作者 2026-11-03：原本只有一次淡入太短）。不用點，自己往下走。"""
+        black = {"type": "scene", "title": "轉場：全黑", "text": "", "background": "assets/art/black.webp", "transition": "fadeBlack",
+                 "transitionMs": 1800, "autoAdvance": {"enabled": True, "mode": "delay", "delayMs": 2000, "uninterruptible": True},
+                 "stage": {"actors": []}, "characterLayers": []}
+        show = {"type": "scene", "title": "轉場：CG", "text": "", "background": cg, "transition": "fade",
+                "transitionMs": 1500, "autoAdvance": {"enabled": True, "mode": "delay", "delayMs": 2500, "uninterruptible": True},
+                "stage": {"actors": []}, "characterLayers": []}
+        for k, d in (("-black", black), ("-cg", show)):
+            nodes.append({"id": sid + k, "type": "story", "position": {"x": x[0], "y": 520}, "data": d}); x[0] += 420
+        return sid + "-black", sid + "-cg"
 
     def edge(a, b, h="out"):
         edges.append({"id": f"e{len(edges)}", "source": a, "target": b, "sourceHandle": h, "targetHandle": "in"})
@@ -82,7 +94,8 @@ def build():
         b = card(key, bsec); edge(c, b, f"choice-{i}")
         seq = by[name + "後續"]
         q = seq["lines"].pop() if seq.get("choice") else None
-        s1 = card(key + "-seq", seq); edge(b, s1)
+        bk, sh = interlude(key + "-to-seq", next(l["background"] for l in seq["lines"] if "background" in l))
+        s1 = card(key + "-seq", seq); edge(b, bk); edge(bk, sh); edge(sh, s1)
         if seq.get("choice"):
             c2 = choice(key + "-pick", seq, seq["choice"], q["text"], q.get("background")); edge(s1, c2)
             end = None
