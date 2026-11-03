@@ -81,7 +81,7 @@ JOBS = {
         "obvious gray at the temples and some gray strands on top, visible lines at the corners of the eyes and on the forehead, "
         "a slightly fuller jaw and face, a little less youthful skin; he must look obviously older than image 1, a man in his "
         "mid forties, still lean from running. He wears a dark green polo shirt and khaki trousers. Expression: quiet, gentle."),
-    # ── 程真（親生；正常線、悲劇線、幻想線想像中的女兒） ──
+    # ── 程真（親生；客廳線、照片線、鏡子線想像中的女兒） ──
     "zhen6": anchor([LIN24, CHENG24, STYLE_B],
         "Image 1 is the mother Lin Xiangwan (林向晚), image 2 is the father Cheng Che (程徹). Image 3 is the painting style anchor only.",
         "Paint their daughter Cheng Zhen (程真), a 6-year-old Taiwanese kindergarten girl: she clearly resembles both parents, her "
@@ -108,7 +108,7 @@ JOBS = {
         "resembles her mother in image 2 but is her own person, her hair is shoulder length and tied in a high ponytail (different "
         "from her mother's low ponytail). She wears a deep red sleeveless running singlet with white trim and black running shorts "
         "(different colors from her mother's navy uniform). No race bib, no logos. Expression: confident, bright."),
-    # ── 收養的程真（幻想線後續）：跟程徹、林向晚完全不像 ──
+    # ── 收養的程真（鏡子線後續）：跟程徹、林向晚完全不像 ──
     "adopt4": anchor([STYLE_B],
         "Image 1 is the painting style anchor only.",
         "Paint a 4-year-old Taiwanese girl, a child waiting to be adopted: a round face, slightly tanned skin, big round dark brown "
@@ -126,7 +126,7 @@ JOBS = {
         "Paint the same woman at about 68, a Taiwanese grandmother: same face as image 1 with soft wrinkles, short permed gray-and-white "
         "hair, reading glasses hanging on a cord at her chest. She wears a lavender cardigan over a white blouse and dark gray trousers. "
         "Expression: warm, kind."),
-    # ── 正常線後續的學長、學姊 ──
+    # ── 客廳線後續的學長、學姊 ──
     "senior_boy": anchor([CHENG17, STYLE_B],
         "Image 1 shows only the style of a Taiwanese high school track uniform; do not copy the face. Image 2 is the painting style anchor only.",
         "Paint a DIFFERENT boy: an 18-year-old Taiwanese high school senior, 800m runner, tall and lanky, short neat black hair with a "
@@ -293,7 +293,7 @@ LIVING = ("a cozy family living room in a Taiwanese apartment: a light gray fabr
 ENTRY = ("the small entrance hall of a Taiwanese apartment: a front door, a low wooden shoe cabinet, a row of key hooks on the wall, "
          "a narrow tiled floor where shoes are left")
 JOBS.update({
-    # ── 正常線 ──
+    # ── 客廳線 ──
     "N01": cg([("cheng", 35, 34), ("zhen", 6, 6)], f"""Scene: seen from a dark bedroom doorway looking out into a bright {LIVING}.
 The 6-year-old CHENG ZHEN stands on the sofa cushions in her pinafore dress, chest puffed out, shouting proudly with her arms up.
 CHENG CHE sits beside her on the sofa leaning toward her, whispering a correction behind his hand, playful. The dark door frame of
@@ -343,7 +343,7 @@ back three-quarters to the viewer, sleeves rolled up, slowly washing a plate und
     "NS06": cg([("lin", 45, 45)], f"""Scene: {VANITY}, night. LIN XIANGWAN (45) sits at the vanity writing a letter, a small smile, seen
 from the side; on the desk beside the paper stands a small framed photo of a girl in a red running singlet crossing a finish line.
 No readable writing."""),
-    # ── 悲劇線 ──
+    # ── 照片線 ──
     "T01": cg([("cheng", 20, 21)], """Scene: a framed photograph hanging on a bedroom wall in dim evening light; the picture inside the
 frame shows a university relay race: CHENG CHE (21) has just handed off the baton and stopped on the track, hands on his hips,
 watching the next runner sprint away up the lane, smiling so his eyes curve into thin lines. The frame and the wall around it are
@@ -366,7 +366,7 @@ figures, a big one and a small one, holding hands under a sun (no writing)."""),
 (34) stands alone in the middle of a lane in everyday clothes, small in the wide frame, not moving, looking down the empty track."""),
     "T08": cg([], """Scene with NO people: on a child's desk at night, a small pink kindergarten backpack with its front pocket open, a
 small set of house keys being placed inside; only the keys and the bag are in focus, soft lamp light."""),
-    # ── 悲劇線後續 ──
+    # ── 照片線後續 ──
     "TS00": cg([("lin", 35, 34), ("grandma", 68, 68)], """Scene: a bedroom at night, a dim lamp. LIN XIANGWAN (34) sits on the edge of
 the bed, bent forward, exhausted, crying silently. GRANDMA (68) sits beside her in a cardigan thrown over her pajamas, holding Lin's
 hand in both of hers on her lap, steady and calm. Through the window the sky is beginning to turn pale before dawn."""),
@@ -388,7 +388,7 @@ of a man's clean washed running shoes onto the top shelf of the cabinet. On the 
 clean space."""),
     "TS06": cg([("zhen", 9, 9)], """Scene: outside an apartment front door, daytime. Close view of the 9-year-old CHENG ZHEN's hand
 holding a small set of house keys with a red ribbon, reaching toward the door lock; her face in profile, excited and serious."""),
-    # ── 幻想線 ──
+    # ── 鏡子線 ──
     "F01": cg([("lin", 35, 34)], f"""Scene: {VANITY}. LIN XIANGWAN (34) looks into the round mirror of the vanity; we see her reflection
 in the mirror clearly, her real face turned away from us. The reflection shows a calm, sad woman who looks like any mother. The pen
 lies on the letter."""),
@@ -423,7 +423,7 @@ over her. Edges fade into white paper."""),
 doorway; beyond the doorway is a bright {LIVING} where CHENG CHE (34) sits on the sofa leaning forward watching the television; on
 the TV screen women sprinters are crouched in the starting blocks on a red track (no text). The doorway frames the scene. Her hand
 holds the door frame."""),
-    # ── 幻想線後續 ──
+    # ── 鏡子線後續 ──
     "FS00": cg([], f"""Scene with NO people: a low coffee table at night under a lamp, covered with many handwritten letters spread out
 one by one, some in envelopes of slightly different ages and colors, all writing illegible. The corner of a sofa."""),
     "FS01": cg([("lin", 35, 34), ("cheng", 35, 34)], """Scene: a sofa late at night, lamp light. LIN XIANGWAN (34) sits sideways crying

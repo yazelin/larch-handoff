@@ -306,7 +306,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "正常線（選「房門外的客廳」）",
+      "title": "客廳線（選「房門外的客廳」）",
       "speaker": "",
       "text": "你們倆窩在沙發上，爸爸正在陪妳練習畢業典禮要說的話。妳突然站起來，挺著小肚子，很大聲地說：「我長大要跑得跟媽媽一樣快！」爸爸在旁邊小聲提醒：「要說比媽媽快。」妳想了一下，又說了一次：「我長大要跑得比媽媽快！」",
       "dialogueLines": [
@@ -404,7 +404,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "正常線後續",
+      "title": "客廳線後續",
       "speaker": "",
       "text": "程真：",
       "dialogueLines": [
@@ -663,7 +663,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "悲劇線（選「牆上」）",
+      "title": "照片線（選「牆上」）",
       "speaker": "",
       "text": "牆上那張照片，是他大學最後一場接力賽。他剛把棒子交出去，停在跑道上，看著下一棒往前跑遠，笑得眼睛瞇成一條線。照片是我在看台上拍的。他再也不會變老了。",
       "dialogueLines": [
@@ -809,7 +809,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "悲劇線後續",
+      "title": "照片線後續",
       "speaker": "",
       "text": "程真：",
       "dialogueLines": [
@@ -909,7 +909,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "幻想線（選「化妝台上的鏡子」）",
+      "title": "鏡子線（選「化妝台上的鏡子」）",
       "speaker": "",
       "text": "鏡子裡的我，看起來跟每一個媽媽都一樣。可是我知道，這封信裡寫的程真，從來沒有來過。",
       "dialogueLines": [
@@ -1159,7 +1159,7 @@
      },
      "data": {
       "type": "dialogue",
-      "title": "幻想線後續",
+      "title": "鏡子線後續",
       "speaker": "",
       "text": "程真：",
       "dialogueLines": [

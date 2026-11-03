@@ -11,7 +11,7 @@ R = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from cg_jobs import latest
 
-BGM = {"主題曲": "theme", "主題曲・正常線版（溫暖）": "normal", "主題曲・悲劇線版（只剩鋼琴）": "tragic", "主題曲・幻想線版（空靈）": "fantasy"}
+BGM = {"主題曲": "theme", "主題曲・客廳線版（溫暖）": "normal", "主題曲・照片線版（只剩鋼琴）": "tragic", "主題曲・鏡子線版（空靈）": "fantasy"}
 UPSTREAM = {"C04": "assets/art/cg/upstream/cg-vending.webp", "F04": "assets/art/cg/upstream/cg-gaze.webp"}
 
 
@@ -75,7 +75,7 @@ def build():
     tr = by["共同段落"]; last = tr["lines"].pop()
     t = card("trunk", tr, start=True)
     c = choice("pick-look", tr, tr["choice"], last["text"]); edge(t, c)
-    branches = [("normal", "正常線"), ("tragic", "悲劇線"), ("fantasy", "幻想線")]
+    branches = [("normal", "客廳線"), ("tragic", "照片線"), ("fantasy", "鏡子線")]
     for i, (key, name) in enumerate(branches):
         bsec = next(s for s in secs if s["title"].startswith(name + "（"))
         b = card(key, bsec); edge(c, b, f"choice-{i}")

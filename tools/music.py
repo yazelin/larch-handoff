@@ -11,7 +11,7 @@ RAW, OUT = os.path.join(R, 'art/music_raw'), os.path.join(R, 'assets/audio')
 URL = os.environ.get('GEMINI_WEB_MUSIC_URL', '')   # 服務網址只從本機環境讀，不進 repo（tools/run_local.sh 會設好）
 CTX = ssl._create_unverified_context()   # 內網自簽憑證
 CORE = 'soft felt piano carrying a simple tender four-note motif, like a mother writing a letter to her young daughter at a bedroom dresser at night'
-# 正常、悲劇、幻想是第二版：第一版樂器沒照指定（Gemini 代聽：悲劇線有弦樂、正常線沒吉他、幻想線沒鋼片琴），改成樂器寫在最前面。
+# 正常、悲劇、幻想是第二版：第一版樂器沒照指定（Gemini 代聽：照片線有弦樂、客廳線沒吉他、鏡子線沒鋼片琴），改成樂器寫在最前面。
 TRACKS = {
     'theme': f'Main theme: {CORE}, warm cello and soft string pads join gently, nostalgic and quietly hopeful, 70 BPM, major key, instrumental, no vocals, loopable',
     'normal': 'Fingerpicked nylon acoustic guitar leads, with soft felt piano and light glockenspiel sparkles, a tender four-note motif, '
