@@ -44,6 +44,24 @@ def parse():
     return secs
 
 
+SITE_BOARD, SITE_URL = "board-site", "https://yazelin.github.io/larch-handoff/"
+
+
+def site_board():
+    """第二章：全螢幕小遊戲卡，用 iframe 嵌入公開站。看完按「略過」結束。"""
+    shell = ('<!doctype html><html lang="zh-Hant"><meta charset="utf-8">'
+             '<style>html,body{margin:0;height:100%;background:#0a1122}iframe{width:100%;height:100%;border:0;display:block}</style>'
+             f'<iframe src="{SITE_URL}" allow="fullscreen; autoplay"></iframe>'
+             "<script>parent.postMessage({type:'larch:ready'},'*');</script></html>")
+    n = {"id": "site", "type": "story", "position": {"x": 100, "y": 200}, "data": {
+        "type": "miniGame", "title": "第二章・幕後與原聲帶", "text": "作品介紹、原聲帶、查證紀錄。看完按「略過」結束。",
+        "miniGameHtml": shell, "miniGamePresentation": "fullscreen", "miniGameSkippable": True,
+        "miniGameReadVars": [], "miniGameWriteVars": [], "miniGameNote": f"薄殼而已，內容在 {SITE_URL}",
+        "start": True, "voiceMode": "off", "stage": {"actors": []}}}
+    return {"id": SITE_BOARD, "kind": "story", "mode": "story", "name": "第二章・幕後與原聲帶", "description": "", "nodes": [n], "edges": [],
+            "thumbnail": cg_path("COVER")}
+
+
 def build():
     secs = parse(); by = {s["title"]: s for s in secs}
     nodes, edges = [], []; x = [0]
@@ -104,7 +122,12 @@ def build():
             e = card(key + "-end", endsec)
             for j, sub in enumerate(subs):
                 sc = card(f"{key}-sub{j}", sub); edge(c2, sc, f"choice-{j}"); edge(sc, e)
-    proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges}]}
+    # 三條線讀完：跳到第二章（全螢幕內嵌公開站，照上篇 larch-start-line/src/build.py 的 site_board）
+    ends = [n["id"] for n in nodes if n["id"] not in {e["source"] for e in edges} and n["data"]["type"] == "dialogue"]
+    nodes.append({"id": "to-site", "type": "story", "position": {"x": x[0], "y": 260}, "data": {
+        "type": "boardJump", "title": "前往第二章", "text": "", "jumpBoardId": SITE_BOARD, "jumpNodeId": "site"}})
+    for e_id in ends: edge(e_id, "to-site")
+    proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges}, site_board()]}
     json.dump(proj, open(os.path.join(R, "project.json"), "w"), ensure_ascii=False, indent=1)
     miss = sorted({m for m in re.findall(r"【CG (\w+)】", open(os.path.join(R, "canon", "劇本草稿.md")).read()) if not cg_path(m)})
     print(f"{len(nodes)} 張卡、{len(edges)} 條線；還沒有圖的 CG：{' '.join(miss) or '無'}")

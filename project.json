@@ -1424,6 +1424,21 @@
       "characterLayers": [],
       "voiceMode": "off"
      }
+    },
+    {
+     "id": "to-site",
+     "type": "story",
+     "position": {
+      "x": 7560,
+      "y": 260
+     },
+     "data": {
+      "type": "boardJump",
+      "title": "前往第二章",
+      "text": "",
+      "jumpBoardId": "board-site",
+      "jumpNodeId": "site"
+     }
     }
    ],
    "edges": [
@@ -1552,8 +1567,64 @@
      "target": "fantasy-seq",
      "sourceHandle": "out",
      "targetHandle": "in"
+    },
+    {
+     "id": "e18",
+     "source": "normal-end",
+     "target": "to-site",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e19",
+     "source": "tragic-seq",
+     "target": "to-site",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e20",
+     "source": "fantasy-seq",
+     "target": "to-site",
+     "sourceHandle": "out",
+     "targetHandle": "in"
     }
    ]
+  },
+  {
+   "id": "board-site",
+   "kind": "story",
+   "mode": "story",
+   "name": "第二章・幕後與原聲帶",
+   "description": "",
+   "nodes": [
+    {
+     "id": "site",
+     "type": "story",
+     "position": {
+      "x": 100,
+      "y": 200
+     },
+     "data": {
+      "type": "miniGame",
+      "title": "第二章・幕後與原聲帶",
+      "text": "作品介紹、原聲帶、查證紀錄。看完按「略過」結束。",
+      "miniGameHtml": "<!doctype html><html lang=\"zh-Hant\"><meta charset=\"utf-8\"><style>html,body{margin:0;height:100%;background:#0a1122}iframe{width:100%;height:100%;border:0;display:block}</style><iframe src=\"https://yazelin.github.io/larch-handoff/\" allow=\"fullscreen; autoplay\"></iframe><script>parent.postMessage({type:'larch:ready'},'*');</script></html>",
+      "miniGamePresentation": "fullscreen",
+      "miniGameSkippable": true,
+      "miniGameReadVars": [],
+      "miniGameWriteVars": [],
+      "miniGameNote": "薄殼而已，內容在 https://yazelin.github.io/larch-handoff/",
+      "start": true,
+      "voiceMode": "off",
+      "stage": {
+       "actors": []
+      }
+     }
+    }
+   ],
+   "edges": [],
+   "thumbnail": "assets/art/cg/COVER_v3.webp"
   }
  ]
 }
