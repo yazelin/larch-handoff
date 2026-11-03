@@ -62,8 +62,8 @@ def build():
         nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": len(nodes) % 3 * 260}, "data": d}); x[0] += 420
         return sid
 
-    def choice(sid, sec, labels, text=""):
-        bg = next((l["background"] for l in reversed(sec["lines"]) if "background" in l), None)
+    def choice(sid, sec, labels, text="", own_bg=None):
+        bg = own_bg or next((l["background"] for l in reversed(sec["lines"]) if "background" in l), None)   # 分歧前那句自己的 CG 優先（C28）
         nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": 0}, "data": {
             "type": "choice", "title": sec.get("prompt", "選擇"), "text": text, "background": bg, "choices": labels,
             "choiceMode": "branch", "choicePlacement": "center", "stage": {"actors": []}, "characterLayers": [], "voiceMode": "off"}})
@@ -74,7 +74,8 @@ def build():
 
     tr = by["共同段落"]; last = tr["lines"].pop()
     t = card("trunk", tr, start=True)
-    c = choice("pick-look", tr, tr["choice"], last["text"]); edge(t, c)
+    SAVE_HINT = "\n\n（建議存檔後再選。）"   # 作者 2026-11-03 要求
+    c = choice("pick-look", tr, tr["choice"], last["text"] + SAVE_HINT, last.get("background")); edge(t, c)
     branches = [("normal", "客廳線"), ("tragic", "照片線"), ("fantasy", "鏡子線")]
     for i, (key, name) in enumerate(branches):
         bsec = next(s for s in secs if s["title"].startswith(name + "（"))
@@ -83,7 +84,7 @@ def build():
         q = seq["lines"].pop() if seq.get("choice") else None
         s1 = card(key + "-seq", seq); edge(b, s1)
         if seq.get("choice"):
-            c2 = choice(key + "-pick", seq, seq["choice"], q["text"]); edge(s1, c2)
+            c2 = choice(key + "-pick", seq, seq["choice"], q["text"], q.get("background")); edge(s1, c2)
             end = None
             subs = [s for s in secs if s["title"] in ("學長", "學姊")]
             endsec = by["共同結尾"]
