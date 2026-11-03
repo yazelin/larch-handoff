@@ -1,0 +1,11 @@
+{
+ "job": "img_f1d9865f7238d6cd6333c8c0",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the picture to keep, change only the shoes.\nImage 3 is the entryway; the small pink pair is CHENG ZHEN's.\nImage 4 is the character design of LIN XIANGWAN (the woman, keep her face, eyes and fine wispy bangs; long straight black hair); in this picture LIN XIANGWAN is about 34 years old.\nImage 5 is the character design of CHENG ZHEN (their daughter, keep her face and eyes); in this picture CHENG ZHEN is about 6 years old.\n\nKeep this picture exactly the same as image 2: same place, composition, poses, faces and clothes. The only change is the footwear: the little girl CHENG ZHEN running on the track wears the small pink children's sneakers from image 3.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/cg/N04_v1.webp",
+  "/home/ct/larch-handoff/assets/art/cg/N03_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/lin35_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/zhen6_v1.webp"
+ ]
+}

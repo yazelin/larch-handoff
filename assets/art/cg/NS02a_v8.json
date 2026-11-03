@@ -1,0 +1,11 @@
+{
+ "job": "img_deb4a0395e0eb78d869c168e",
+ "prompt": "Image 1 is the painting style reference only; do not copy its scenery.\nImage 2 is the picture to keep, change only the shoes.\nImage 3 is the two pairs of running shoes: the red-and-white pair is CHENG ZHEN's, the dark grey-and-black pair is THE SENIOR BOY's.\nImage 4 is the character design of CHENG ZHEN (their daughter, keep her face and eyes); in this picture CHENG ZHEN is about 17 years old.\nImage 5 is the character design of THE SENIOR BOY (keep his face, glasses and hair); in this picture THE SENIOR BOY is about 18 years old.\n\nKeep this picture exactly the same as image 2: the same entryway, the same\ncomposition, the same poses, the same clothes (CHENG ZHEN in a red running singlet with white trim, black running shorts and a dark\nbackpack, both hands holding the backpack straps; THE SENIOR BOY bowing in the doorway holding a box of fruit). The only change is the\nshoes, which must match image 3: on the tiled floor beside CHENG ZHEN lies the pair of red-and-white running shoes she has just taken\noff (she stands in white socks), and THE SENIOR BOY is wearing dark grey-and-black running shoes. No white sneakers on the floor.\n\nPainting style: delicate transparent watercolor on textured cold-press paper, exactly like image 1: pale luminous washes, soft natural light, loose soft wet edges, visible paper grain, unpainted white paper areas. Hand-painted watercolor illustration, not anime cel shading, not 3D, not photo.\nWide 16:9 landscape composition. Keep all important subjects and faces in the upper two thirds of the frame; the bottom third should be calm, low-detail ground or background (a text box will cover it). People do not look at the viewer unless stated. Correct anatomy: each hand has exactly five fingers, left and right hands on the correct sides; any hand not described is hidden out of view. Modern everyday objects look plain and timeless, nothing futuristic. No text, no letters, no numbers, no logos, no brand names, no signage, no watermark.",
+ "refs": [
+  "larch-start-line/assets/art/anchors/style-b.webp",
+  "/home/ct/larch-handoff/assets/art/cg/NS02a_v7.webp",
+  "/home/ct/larch-handoff/assets/art/cg/NS04a_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/zhen17_v1.webp",
+  "/home/ct/larch-handoff/assets/art/anchors/senior_boy_v1.webp"
+ ]
+}

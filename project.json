@@ -338,7 +338,7 @@
         "id": "l4",
         "speaker": "",
         "text": "我希望妳健康，吃得下、睡得好。如果跌倒了，能夠自己再站起來；如果有站不起來的時候，一定要記得還有爸爸媽媽。",
-        "background": "assets/art/cg/N02_v1.webp"
+        "background": "assets/art/cg/N02_v2.webp"
        },
        {
         "id": "l5",
@@ -365,7 +365,7 @@
         "id": "l9",
         "speaker": "",
         "text": "接力賽裡，交棒的人跑完了自己的那一段，會慢慢停在跑道旁邊，看著接棒的人一直往前跑，也替下一棒加油。媽媽也是。總有一天，我會把棒子交到妳的手上。就算那時候，我已經跑過了終點，我也會一直站在終點後面，看著妳跑，替妳加油。",
-        "background": "assets/art/cg/N04_v1.webp"
+        "background": "assets/art/cg/N04_v2.webp"
        },
        {
         "id": "l10",
@@ -485,7 +485,7 @@
         "id": "l4",
         "speaker": "",
         "text": "上個月全中運的女子四百公尺，妳跑出了比媽媽高二那年還快的成績。妳衝過終點的時候，我在看台上喊到聲音都啞了。妳爸爸在旁邊，一直拍我的肩膀，說：「妳看，我就說吧。」",
-        "background": "assets/art/cg/NS01_v1.webp"
+        "background": "assets/art/cg/NS01_v2.webp"
        }
       ],
       "stage": {
@@ -506,7 +506,7 @@
       "type": "choice",
       "title": "站在妳身後的是",
       "text": "今天，妳第一次帶人回家吃飯。妳開門進來的時候，比誰都緊張。站在妳身後的是——",
-      "background": "assets/art/cg/NS01_v1.webp",
+      "background": "assets/art/cg/NS01_v2.webp",
       "choices": [
        "田徑隊的學長",
        "田徑隊的學姊"
@@ -579,7 +579,7 @@
         "id": "l0",
         "speaker": "",
         "text": "田徑隊的學長。妳說：「這是我男朋友。」",
-        "background": "assets/art/cg/NS02a_v7.webp"
+        "background": "assets/art/cg/NS02a_v8.webp"
        },
        {
         "id": "l1",
@@ -625,7 +625,7 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/NS02a_v7.webp"
+      "background": "assets/art/cg/NS02a_v8.webp"
      }
     },
     {
@@ -645,7 +645,7 @@
         "id": "l0",
         "speaker": "",
         "text": "田徑隊的學姊。妳說：「這是我女朋友。」",
-        "background": "assets/art/cg/NS02b_v1.webp"
+        "background": "assets/art/cg/NS02b_v2.webp"
        },
        {
         "id": "l1",
@@ -701,7 +701,7 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/NS02b_v1.webp"
+      "background": "assets/art/cg/NS02b_v2.webp"
      }
     },
     {
@@ -963,7 +963,7 @@
         "id": "l8",
         "speaker": "",
         "text": "這幾天，我先一個人回家，把家裡整理好。爸爸的跑鞋，我洗乾淨，收進了鞋櫃。玄關空出來的地方，要留給妳的鞋子。",
-        "background": "assets/art/cg/TS05_v1.webp"
+        "background": "assets/art/cg/TS05_v2.webp"
        },
        {
         "id": "l9",
