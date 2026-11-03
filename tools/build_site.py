@@ -78,14 +78,15 @@ if __name__ == '__main__':
     os.makedirs(os.path.join(R, 'docs', 'sources'), exist_ok=True)
     open(os.path.join(R, 'docs', 'sources', 'index.html'), 'w', encoding='utf-8').write(PAGE % md(src))
     print('docs/sources/index.html')
-    if '--tag' in __import__('sys').argv:   # 公開站用到的圖與完整版配樂打成 jsDelivr 孤兒 tag，寫進 docs/site.json
+    if '--tag' in __import__('sys').argv:   # 公開站用到的素材照 push.py 同一套分組打 tag，網址寫進 docs/site.json
         import json, sys
         sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from push import jsd_tag
+        from push import cdn_map
         text = ''.join(open(os.path.join(R, 'docs', f), encoding='utf-8').read() for f in ('index.html', 'assets-site/tracks.js', 'music/index.html'))
         paths = sorted({'assets/' + p for p in re.findall(r'"((?:art|audio)/[^"]+\.(?:webp|mp3))"', text)})
-        tag = jsd_tag(paths)
+        urls = cdn_map(paths)
         sj = os.path.join(R, 'docs', 'site.json'); j = json.load(open(sj))
-        j['assetBase'] = f'https://cdn.jsdelivr.net/gh/yazelin/larch-handoff@{tag}/assets/'
+        j.pop('assetBase', None)
+        j['assets'] = {p[len('assets/'):]: u for p, u in sorted(urls.items())}
         open(sj, 'w').write(json.dumps(j, ensure_ascii=False, indent=1) + '\n')
-        print(len(paths), '個素材 →', tag)
+        print(len(paths), '個素材寫進 docs/site.json')

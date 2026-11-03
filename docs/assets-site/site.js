@@ -1,5 +1,5 @@
 /* 共用：素材網址、遊玩按鈕、導覽列、進場動畫。
-   圖片與音樂一律走 jsDelivr；site.json 的 assetBase 可以改，網址後面加 ?local 會改用 repo 裡的 ../assets/（本機驗收用）。 */
+   圖片與音樂一律走 jsDelivr；每個檔案的網址寫在 site.json 的 assets（照類型與路線分好幾個 tag，由 tools/build_site.py --tag 產生），網址後面加 ?local 會改用 repo 裡的 ../assets/（本機驗收用）。 */
 (function () {
   "use strict";
   var DEFAULT_BASE = "https://cdn.jsdelivr.net/gh/yazelin/larch-handoff@main/assets/";
@@ -9,7 +9,8 @@
   var base = local ? new URL("../assets/", siteJson).href : DEFAULT_BASE;
 
   var S = window.SITE = { base: base, playUrl: "", ready: null };
-  S.asset = function (p) { return S.base + p; };
+  S.map = {};
+  S.asset = function (p) { return (!local && S.map[p]) || S.base + p; };
 
   function apply(root) {
     (root || document).querySelectorAll("[data-a]").forEach(function (el) {
@@ -36,10 +37,7 @@
 
   S.ready = fetch(siteJson, { cache: "no-cache" }).then(function (r) { return r.json(); }).catch(function () { return {}; }).then(function (j) {
     S.playUrl = (j.playUrl || "").trim();
-    if (!local && j.assetBase) {
-      var b = new URL(j.assetBase, siteJson).href;
-      if (b !== S.base) { S.base = b; apply(); }
-    }
+    if (!local && j.assets) { S.map = j.assets; apply(); }
     playButtons();
     return S;
   });
