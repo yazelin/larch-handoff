@@ -59,7 +59,7 @@ def site_board():
         "miniGameReadVars": [], "miniGameWriteVars": [], "miniGameNote": f"薄殼而已，內容在 {SITE_URL}",
         "start": True, "voiceMode": "off", "stage": {"actors": []}}}
     return {"id": SITE_BOARD, "kind": "story", "mode": "story", "name": "第二章・幕後與原聲帶", "description": "", "nodes": [n], "edges": [],
-            "thumbnail": cg_path("COVER")}
+            "thumbnail": cg_path("C01")}   # 第二章用寫信那張，跟主白板的封面分開
 
 
 def build():
