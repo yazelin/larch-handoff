@@ -579,7 +579,7 @@
         "id": "l0",
         "speaker": "",
         "text": "田徑隊的學長。妳說：「這是我男朋友。」",
-        "background": "assets/art/cg/NS02a_v2.webp"
+        "background": "assets/art/cg/NS02a_v5.webp"
        },
        {
         "id": "l1",
@@ -625,7 +625,7 @@
       },
       "characterLayers": [],
       "voiceMode": "off",
-      "background": "assets/art/cg/NS02a_v2.webp"
+      "background": "assets/art/cg/NS02a_v5.webp"
      }
     },
     {
