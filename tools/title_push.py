@@ -60,6 +60,8 @@ def main(work):
         except SystemExit as e:
             print('縮圖沒改成（設定端點不收）：', e)
     _, back = req('GET', url)
+    if back.get('project', back).get('description') != p.get('description'):   # 2026-11-03 下篇寫完標題畫面後簡介變回預設值
+        print('注意：簡介跟寫入前不一樣了，下篇跑 tools/push.py 補回，上篇跑 src/push.py')
     b = back.get('project', back)['settings']
     ok = (b.get('customInterfaces') or {}).get('title', {}).get('html') == page
     print('縮圖', '已換成動圖' if b.get('projectThumbnail') == state['title_loop_url'] else '還是舊的')
