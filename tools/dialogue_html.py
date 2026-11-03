@@ -12,7 +12,11 @@ COMMON_JS = '''<script>
   function set(h) { root.classList.toggle('is-hidden', h); show.hidden = !h; }
   hide.addEventListener('click', function (e) { e.stopPropagation(); set(true); });
   show.addEventListener('click', function (e) { e.stopPropagation(); set(false); });
-  window.addEventListener('larch:state', function () { set(false); });   // 換句就回來，免得玩家以為卡住
+  window.addEventListener('larch:state', function (e) {
+    set(false);   // 換句就回來，免得玩家以為卡住
+    var d = e.detail || {};
+    root.classList.toggle('is-empty', !String(d.text || '').trim());   // 轉場卡沒有字：整個框藏起來，不留一張空白卡
+  });
 })();
 </script>'''
 
@@ -41,7 +45,8 @@ button:active { transform: scale(.92); }
 .show { position: absolute; right: 3vw; bottom: 2vh; width: auto; padding: 0 14px; border-radius: 99px; font-size: 14px; letter-spacing: .1em;
   background: rgba(251,246,236,.8); box-shadow: 0 4px 14px -6px rgba(0,0,0,.4); }
 .show[hidden] { display: none; }
-.is-hidden .card { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.is-hidden .card, .is-empty .card { opacity: 0; transform: translateY(12px); pointer-events: none; }
+.is-empty .show { display: none; }
 @media (max-width: 720px), (orientation: portrait) {
   .dlg { padding: 0 3vw 1.5vh; }
   .card { width: 100%; padding: 14px 16px 10px 18px; }
@@ -83,8 +88,9 @@ button:active { transform: scale(.92); }
 .show { position: absolute; right: 6vw; bottom: 2.2vh; width: auto; padding: 0 14px; border-radius: 99px; font-size: 14px; letter-spacing: .1em;
   background: rgba(6,10,22,.6); }
 .show[hidden] { display: none; }
-.is-hidden { background: none; }
-.is-hidden .row { opacity: 0; pointer-events: none; }
+.is-hidden, .is-empty { background: none; }
+.is-hidden .row, .is-empty .row { opacity: 0; pointer-events: none; }
+.is-empty .show { display: none; }
 @media (max-width: 720px), (orientation: portrait) {
   .dlg { padding: 3.5em 4vw 1.5vh; }
   .text { font-size: min(var(--larch-text-size, 22px), 17px); }
