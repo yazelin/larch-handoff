@@ -13,7 +13,7 @@
 - CG 清單與年紀表：第一版（`canon/CG清單.md`）。
 - 視覺小說劇本草稿：由文字自動組成（`canon/劇本草稿.md`）。
 - 定錨 19 張、CG 73 張：完成。
-- 配樂四首：完成（gemini-web 生成，`assets/audio/`）。音效（口令、槍聲）還沒做。
+- 配樂四首：完成（gemini-web 生成，`assets/audio/`）。不做音效（作者 2026-11-03 決定）。
 - Larch：已上架 https://yazelin-handoff.larch.games （`tools/push.py` 重推）。
 - 公開站：https://yazelin.github.io/larch-handoff/ （首頁、原聲帶、查證紀錄，原始檔在 `docs/`）。
 
