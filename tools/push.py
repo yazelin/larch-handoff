@@ -50,9 +50,13 @@ def cdn_map(paths):
         tag = jsd_tag(sorted(ps), g)
         for p in ps: out[p] = f'https://cdn.jsdelivr.net/gh/{REPO}@{tag}/{p}'
         print(f'  {g}：{len(ps)} 個、{mb:.1f} MB → {tag}', flush=True)
-    for p, u in out.items():
-        try: urllib.request.urlopen(urllib.request.Request(u, method='HEAD'), timeout=60)
-        except urllib.error.HTTPError as e: raise SystemExit(f'jsDelivr 拿不到 {p}：{e.code}')
+    import time
+    for p, u in out.items():   # jsDelivr 偶爾對單一網址回 404／逾時（2026-11-16 連續遇到），每個網址最多試四次，最後仍要 200
+        for k in range(4):
+            try: urllib.request.urlopen(urllib.request.Request(u, method='HEAD'), timeout=60); break
+            except (urllib.error.HTTPError, urllib.error.URLError, TimeoutError) as e:
+                if k == 3: raise SystemExit(f'jsDelivr 拿不到 {p}：{getattr(e, "code", e)}')
+                time.sleep(15)
     return out
 
 
