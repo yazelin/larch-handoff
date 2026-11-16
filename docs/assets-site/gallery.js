@@ -334,5 +334,78 @@ window.GALLERY = [
     "爸爸也寫一句：鑰匙"
    ]
   ]
+ },
+ {
+  "name": "鏡子線後續「關上抽屜」",
+  "items": [
+   [
+    "art/cg/FD11_v2.webp",
+    "第三十一封信（開頭）"
+   ],
+   [
+    "art/cg/FD00_v1.webp",
+    "回到房間，把抽屜關上"
+   ],
+   [
+    "art/cg/FD01_v1.webp",
+    "客廳的燈沒開"
+   ],
+   [
+    "art/cg/FD02_v1.webp",
+    "他才抬起頭看我"
+   ],
+   [
+    "art/cg/FD03_v1.webp",
+    "一個禮拜以後"
+   ],
+   [
+    "art/cg/FD04_v1.webp",
+    "那年冬天，我搬到"
+   ],
+   [
+    "art/cg/FD05_v2.webp",
+    "鎮上的人都叫我林阿姨"
+   ],
+   [
+    "art/cg/FD06_v2.webp",
+    "外婆走的那一年"
+   ],
+   [
+    "art/cg/FD07_v2.webp",
+    "有一天早上"
+   ],
+   [
+    "art/cg/FD08_v2.webp",
+    "想過去收養"
+   ],
+   [
+    "art/cg/FD09_v2.webp",
+    "傍晚的時候"
+   ],
+   [
+    "art/cg/FD10_v2.webp",
+    "前幾年，以前田徑隊"
+   ],
+   [
+    "art/cg/FD12_v1.webp",
+    "最近，我在操場"
+   ],
+   [
+    "art/cg/FE1_v1.webp",
+    "（無字）"
+   ],
+   [
+    "art/cg/FE2_v3.webp",
+    "（無字）"
+   ],
+   [
+    "art/cg/FE3_v2.webp",
+    "（無字）"
+   ],
+   [
+    "art/cg/FE4_v1.webp",
+    "（無字）"
+   ]
+  ]
  }
 ];

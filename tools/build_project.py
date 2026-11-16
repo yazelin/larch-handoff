@@ -33,6 +33,8 @@ def parse():
             pending_bg = cg_path(t[4:-1].strip()); continue
         if t.startswith("【選項】"):
             cur["choice"] = t.split("：", 1)[1].split("／"); cur["prompt"] = t[4:].split("：", 1)[0]; continue
+        if t.startswith("【無字CG "):
+            cur.setdefault("silent", []).append(cg_path(t[6:-1].strip())); continue
         if t.startswith("【轉場】"): pending_tr = True; continue
         if t.startswith("【BGM】"):
             pending_bgm = f"assets/audio/bgm-{BGM[t[5:].strip()]}.mp3"; continue
@@ -106,10 +108,29 @@ def build():
     t = card("trunk", tr, start=True)
     SAVE_HINT = "\n\n（三條線從這裡分開，建議存檔後再選。）"   # 作者 2026-11-03 要求
     c = choice("pick-look", tr, tr["choice"], last["text"] + SAVE_HINT, last.get("background")); edge(t, c)
+    silent_tail = []
     branches = [("normal", "客廳線"), ("tragic", "照片線"), ("fantasy", "鏡子線")]
     for i, (key, name) in enumerate(branches):
         bsec = next(s for s in secs if s["title"].startswith(name + "（"))
         b = card(key, bsec); edge(c, b, f"choice-{i}")
+        if bsec.get("choice"):   # 鏡子線（2026-11-16）：第一封信讀完選「打開抽屜／關上抽屜」，各接一封後續
+            c3 = choice(key + "-pick", bsec, bsec["choice"]); edge(b, c3)
+            for j, title in enumerate((name + "後續", name + "後續・關上抽屜")):
+                seq = by[title]; tag = key + ("-seq" if j == 0 else "-drawer")
+                bk, sh = interlude(key + "-to-seq" if j == 0 else tag + "-in", next(l["background"] for l in seq["lines"] if "background" in l))
+                s1 = card(tag, seq); edge(c3, bk, f"choice-{j}"); edge(bk, sh); edge(sh, s1)
+                sil = by.get("無字 CG") if j == 1 else None
+                if sil:
+                    prev = s1
+                    for k, bgp in enumerate(sil["silent"]):
+                        sid = f"{tag}-silent{k}"
+                        nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": 520}, "data": {
+                            "type": "scene", "title": f"無字 CG {k + 1}", "text": "", "background": bgp, "transition": "fade",
+                            "transitionMs": 1800, "autoAdvance": {"enabled": True, "mode": "delay", "delayMs": 4500, "uninterruptible": True},
+                            "stage": {"actors": []}, "characterLayers": []}}); x[0] += 420
+                        edge(prev, sid); prev = sid
+                    silent_tail.append(prev)
+            continue
         seq = by[name + "後續"]
         q = seq["lines"].pop() if seq.get("choice") else None
         bk, sh = interlude(key + "-to-seq", next(l["background"] for l in seq["lines"] if "background" in l))
@@ -132,6 +153,14 @@ def build():
         "stage": {"actors": []}, "characterLayers": []}})
     for e_id in ends: edge(e_id, "to-site-black")
     edge("to-site-black", "to-site")
+    # 作者 2026-11-16：「關上抽屜」讀完全黑停久一點再接第二章（其他線 2 秒，這條 6 秒）
+    for i, e_id in enumerate(silent_tail):
+        sid = f"to-site-black-long{i}"
+        nodes.append({"id": sid, "type": "story", "position": {"x": x[0], "y": 780}, "data": {
+            "type": "scene", "title": "轉場：全黑（久）", "text": "", "background": "assets/art/black.webp", "transition": "fadeBlack", "transitionMs": 2200,
+            "bgmAction": "fadeOut", "bgmFadeOutMs": 2200, "autoAdvance": {"enabled": True, "mode": "delay", "delayMs": 6000, "uninterruptible": True},
+            "stage": {"actors": []}, "characterLayers": []}})
+        edge(e_id, sid); edge(sid, "to-site")
     proj = {"name": "交棒總在終點後", "boards": [{"id": "main", "name": "交棒總在終點後", "nodes": nodes, "edges": edges, "thumbnail": cg_path("COVER")}, site_board()]}
     json.dump(proj, open(os.path.join(R, "project.json"), "w"), ensure_ascii=False, indent=1)
     miss = sorted({m for m in re.findall(r"【CG (\w+)】", open(os.path.join(R, "canon", "劇本草稿.md")).read()) if not cg_path(m)})

@@ -1251,10 +1251,35 @@
      }
     },
     {
-     "id": "fantasy-to-seq-black",
+     "id": "fantasy-pick",
      "type": "story",
      "position": {
       "x": 6300,
+      "y": 0
+     },
+     "data": {
+      "type": "choice",
+      "title": "那疊信",
+      "text": "",
+      "background": "assets/art/cg/F12_v1.webp",
+      "choices": [
+       "打開抽屜",
+       "關上抽屜"
+      ],
+      "choiceMode": "branch",
+      "choicePlacement": "center",
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": [],
+      "voiceMode": "off"
+     }
+    },
+    {
+     "id": "fantasy-to-seq-black",
+     "type": "story",
+     "position": {
+      "x": 6720,
       "y": 520
      },
      "data": {
@@ -1280,7 +1305,7 @@
      "id": "fantasy-to-seq-cg",
      "type": "story",
      "position": {
-      "x": 6720,
+      "x": 7140,
       "y": 520
      },
      "data": {
@@ -1306,8 +1331,8 @@
      "id": "fantasy-seq",
      "type": "story",
      "position": {
-      "x": 7140,
-      "y": 520
+      "x": 7560,
+      "y": 0
      },
      "data": {
       "type": "dialogue",
@@ -1426,10 +1451,386 @@
      }
     },
     {
+     "id": "fantasy-drawer-in-black",
+     "type": "story",
+     "position": {
+      "x": 7980,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "轉場：全黑",
+      "text": "",
+      "background": "assets/art/black.webp",
+      "transition": "fadeBlack",
+      "transitionMs": 1800,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 2000,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "fantasy-drawer-in-cg",
+     "type": "story",
+     "position": {
+      "x": 8400,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "轉場：CG",
+      "text": "",
+      "background": "assets/art/cg/FD11_v2.webp",
+      "transition": "fade",
+      "transitionMs": 1500,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 2500,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "fantasy-drawer",
+     "type": "story",
+     "position": {
+      "x": 8820,
+      "y": 0
+     },
+     "data": {
+      "type": "dialogue",
+      "title": "鏡子線後續・關上抽屜",
+      "speaker": "",
+      "text": "程真：",
+      "dialogueLines": [
+       {
+        "id": "l0",
+        "speaker": "",
+        "text": "程真：",
+        "background": "assets/art/cg/FD11_v2.webp"
+       },
+       {
+        "id": "l1",
+        "speaker": "",
+        "text": "這是媽媽寫給妳的第三十一封信。今年，妳應該要三十歲了。"
+       },
+       {
+        "id": "l2",
+        "speaker": "",
+        "text": "那天晚上，女子四百跑完以後，妳爸爸轉過頭來找我。我說我去倒水，回到房間，把抽屜關上。",
+        "background": "assets/art/cg/FD00_v1.webp"
+       },
+       {
+        "id": "l3",
+        "speaker": "",
+        "text": "那一年是這樣，後來每一年也都是這樣。我每年寫一封，寫完就收進抽屜最裡面，跟前幾年的放在一起。"
+       },
+       {
+        "id": "l4",
+        "speaker": "",
+        "text": "妳應該要九歲的那一年，他感冒發燒，要去看醫生，找不到健保卡。我在上班，他打電話問我放在哪裡，我說化妝台的抽屜。我忘了，那疊信也放在那個抽屜裡。"
+       },
+       {
+        "id": "l5",
+        "speaker": "",
+        "text": "我下班回家的時候，客廳的燈沒開。他坐在沙發上，那一疊信攤在桌上，一封一封都打開了。",
+        "background": "assets/art/cg/FD01_v1.webp"
+       },
+       {
+        "id": "l6",
+        "speaker": "",
+        "text": "這一刻我等了好多年，也在腦中想過好多次。我想過他會生氣，會罵我，也想過他會抱住我。我沒有想過，他會一句話都不說。"
+       },
+       {
+        "id": "l7",
+        "speaker": "",
+        "text": "過了很久，他才抬起頭看我。他問：「我們在一起二十年，妳時時刻刻都在騙我，從沒向我說過實話，是嗎？」",
+        "background": "assets/art/cg/FD02_v1.webp"
+       },
+       {
+        "id": "l8",
+        "speaker": "",
+        "text": "我答不出來。"
+       },
+       {
+        "id": "l9",
+        "speaker": "",
+        "text": "他又說：「我不管妳以前是怎樣，我在乎的是，妳居然從來不和我說，妳打算隱瞞我到什麼時候？帶進棺材是嗎？我算是到今天才認識妳。」"
+       },
+       {
+        "id": "l10",
+        "speaker": "",
+        "text": "他看我的那個眼神，我在第一封信裡寫過。我最怕他看著我的時候，眼裡的林向晚不見了。那天晚上，我真的在他眼睛裡找不到我自己。"
+       },
+       {
+        "id": "l11",
+        "speaker": "",
+        "text": "他說：「妳騙了我二十年。」"
+       },
+       {
+        "id": "l12",
+        "speaker": "",
+        "text": "我想跟他說，那個男生從來沒有存在過。可是我已經沒有資格說了。我在他身邊二十年，一次都沒有說。"
+       },
+       {
+        "id": "l13",
+        "speaker": "",
+        "text": "一個禮拜以後，他搬了出去。半年以後，我們在戶政事務所簽了字。我又站在那間戶政事務所外面，站了好久。上一次站在那裡，是我換身分證的那天。",
+        "background": "assets/art/cg/FD03_v1.webp"
+       },
+       {
+        "id": "l14",
+        "speaker": "",
+        "text": "那年冬天，我搬到一個沒有人認識我的小鎮。這是我第二次搬到一個沒有人認識我的地方。第一次是外婆陪我去的，這一次，我一個人。",
+        "background": "assets/art/cg/FD04_v1.webp"
+       },
+       {
+        "id": "l15",
+        "speaker": "",
+        "text": "鎮上的人都叫我林阿姨。隔壁的阿嬤會拿自己種的菜給我，菜市場的老闆會多塞一把蔥。他們都只知道，我是一個人從台北搬來的女人。這樣就好。我在這裡住了二十年，從來沒有人問過我小時候長什麼樣子。",
+        "background": "assets/art/cg/FD05_v2.webp"
+       },
+       {
+        "id": "l16",
+        "speaker": "",
+        "text": "外婆走的那一年，我回去了一趟。外公站在靈堂的另一邊，從頭到尾都沒有看我。那年過年，我沒有收到紅包。後來每一年，也都沒有了。我才知道，那些紅包，一直都是外婆自己包的。",
+        "background": "assets/art/cg/FD06_v2.webp"
+       },
+       {
+        "id": "l17",
+        "speaker": "",
+        "text": "鎮上有一間國小，操場的跑道一圈兩百公尺。我每天早上去走一圈，以前用跑的，現在用走的。"
+       },
+       {
+        "id": "l18",
+        "speaker": "",
+        "text": "有一天早上，我看到一個爸爸讓女兒騎在肩膀上，繞著跑道慢慢走。女兒抱著爸爸的頭，笑得好大聲。",
+        "background": "assets/art/cg/FD07_v2.webp"
+       },
+       {
+        "id": "l19",
+        "speaker": "",
+        "text": "我小時候，外公也這樣扛過我。學校運動會那天，他把我扛在肩膀上，擠到最前面看大哥哥大姊姊跑大隊接力。他說：「以後換妳跑，爸爸就站在這裡給妳加油。」"
+       },
+       {
+        "id": "l20",
+        "speaker": "",
+        "text": "後來我真的站上跑道了，外公一次都沒有來過。我最後一次看到外公站在家門口，是他把我的書包丟出來的那一天。"
+       },
+       {
+        "id": "l21",
+        "speaker": "",
+        "text": "那天早上，我坐在看台上，看那個爸爸扛著女兒走完一整圈。"
+       },
+       {
+        "id": "l22",
+        "speaker": "",
+        "text": "這些年，我也想過去收養一個孩子。我去拿過一次說明會的資料，拿回家就收進抽屜了。我怕那個孩子長大以後，同學會知道她的媽媽跟別人不一樣。我怕她在學校被人笑，回家問我：「媽媽，妳為什麼不是正常的媽媽？」我不知道要怎麼回答她。",
+        "background": "assets/art/cg/FD08_v2.webp"
+       },
+       {
+        "id": "l23",
+        "speaker": "",
+        "text": "所以，我連說明會都沒有去。"
+       },
+       {
+        "id": "l24",
+        "speaker": "",
+        "text": "傍晚的時候，常常有年輕人牽著手在堤防上散步。冬天風大，女生會把手塞進男生的口袋裡。",
+        "background": "assets/art/cg/FD09_v2.webp"
+       },
+       {
+        "id": "l25",
+        "speaker": "",
+        "text": "以前，我的腳一到冬天就冰冰的，程徹會把我的腳拉到他腿上，用手掌捂著。在月台上等那班往回開的車的時候，他也是這樣握著我的手，握了半個多小時。他說過，以後我們老了，也要這樣去散步。"
+       },
+       {
+        "id": "l26",
+        "speaker": "",
+        "text": "前幾年，以前田徑隊的學弟在網路上貼了一張照片。是程徹，站在一場國中運動會的終點線後面，旁邊站著一個綁馬尾的女孩，女孩胸前掛著獎牌。學弟說，那是程徹的女兒。",
+        "background": "assets/art/cg/FD10_v2.webp"
+       },
+       {
+        "id": "l27",
+        "speaker": "",
+        "text": "他女兒笑起來，眼睛跟他一樣，瞇成一條線。"
+       },
+       {
+        "id": "l28",
+        "speaker": "",
+        "text": "我看了那張照片好久。後來，我把那個網頁關掉了。"
+       },
+       {
+        "id": "l29",
+        "speaker": "",
+        "text": "程真，這三十一封信裡的妳，會跑步，會叫媽媽，會在冬天把冰冰的小腳塞到我身上。妳從來沒有來過，可是這三十年，陪著我的人，只有妳。"
+       },
+       {
+        "id": "l30",
+        "speaker": "",
+        "text": "最近，我在操場走半圈就要坐下來休息。醫生說我的心臟不好，要我下個禮拜去住院。我跟他說，等我寫完這一封信。",
+        "background": "assets/art/cg/FD12_v1.webp"
+       },
+       {
+        "id": "l31",
+        "speaker": "",
+        "text": "我在第一封信裡寫過，接力賽要有下一棒，棒子才交得出去。"
+       },
+       {
+        "id": "l32",
+        "speaker": "",
+        "text": "棒子要在接力區裡面交。過了那條線才交，裁判就會舉旗，整隊失格。我手上這一棒，跑過了終點，也跑出了接力區，最後還是沒有交出去。"
+       },
+       {
+        "id": "l33",
+        "speaker": "",
+        "text": "我這一生，一直蹲在起跑線上等槍聲。那天晚上，電視裡的槍聲響了，我卻把抽屜關上了。"
+       },
+       {
+        "id": "l34",
+        "speaker": "",
+        "text": "程真，那天晚上沒有跟妳爸爸說出口的話，媽媽想在這裡說完。"
+       },
+       {
+        "id": "l35",
+        "speaker": "",
+        "text": "我是林向晚。我從有記憶開始，就是一個女孩。"
+       },
+       {
+        "id": "l36",
+        "speaker": "",
+        "text": "想當妳媽媽的\n向晚\n寫於妳應該要三十歲的這一年"
+       }
+      ],
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": [],
+      "voiceMode": "off",
+      "background": "assets/art/cg/FD11_v2.webp"
+     }
+    },
+    {
+     "id": "fantasy-drawer-silent0",
+     "type": "story",
+     "position": {
+      "x": 9240,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "無字 CG 1",
+      "text": "",
+      "background": "assets/art/cg/FE1_v1.webp",
+      "transition": "fade",
+      "transitionMs": 1800,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 4500,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "fantasy-drawer-silent1",
+     "type": "story",
+     "position": {
+      "x": 9660,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "無字 CG 2",
+      "text": "",
+      "background": "assets/art/cg/FE2_v3.webp",
+      "transition": "fade",
+      "transitionMs": 1800,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 4500,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "fantasy-drawer-silent2",
+     "type": "story",
+     "position": {
+      "x": 10080,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "無字 CG 3",
+      "text": "",
+      "background": "assets/art/cg/FE3_v2.webp",
+      "transition": "fade",
+      "transitionMs": 1800,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 4500,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "fantasy-drawer-silent3",
+     "type": "story",
+     "position": {
+      "x": 10500,
+      "y": 520
+     },
+     "data": {
+      "type": "scene",
+      "title": "無字 CG 4",
+      "text": "",
+      "background": "assets/art/cg/FE4_v1.webp",
+      "transition": "fade",
+      "transitionMs": 1800,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 4500,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
      "id": "to-site",
      "type": "story",
      "position": {
-      "x": 7560,
+      "x": 10920,
       "y": 260
      },
      "data": {
@@ -1444,7 +1845,7 @@
      "id": "to-site-black",
      "type": "story",
      "position": {
-      "x": 7560,
+      "x": 10920,
       "y": 520
      },
      "data": {
@@ -1460,6 +1861,34 @@
        "enabled": true,
        "mode": "delay",
        "delayMs": 2000,
+       "uninterruptible": true
+      },
+      "stage": {
+       "actors": []
+      },
+      "characterLayers": []
+     }
+    },
+    {
+     "id": "to-site-black-long0",
+     "type": "story",
+     "position": {
+      "x": 10920,
+      "y": 780
+     },
+     "data": {
+      "type": "scene",
+      "title": "轉場：全黑（久）",
+      "text": "",
+      "background": "assets/art/black.webp",
+      "transition": "fadeBlack",
+      "transitionMs": 2200,
+      "bgmAction": "fadeOut",
+      "bgmFadeOutMs": 2200,
+      "autoAdvance": {
+       "enabled": true,
+       "mode": "delay",
+       "delayMs": 6000,
        "uninterruptible": true
       },
       "stage": {
@@ -1578,48 +2007,118 @@
     {
      "id": "e15",
      "source": "fantasy",
-     "target": "fantasy-to-seq-black",
+     "target": "fantasy-pick",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
      "id": "e16",
+     "source": "fantasy-pick",
+     "target": "fantasy-to-seq-black",
+     "sourceHandle": "choice-0",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e17",
      "source": "fantasy-to-seq-black",
      "target": "fantasy-to-seq-cg",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
-     "id": "e17",
+     "id": "e18",
      "source": "fantasy-to-seq-cg",
      "target": "fantasy-seq",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
-     "id": "e18",
+     "id": "e19",
+     "source": "fantasy-pick",
+     "target": "fantasy-drawer-in-black",
+     "sourceHandle": "choice-1",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e20",
+     "source": "fantasy-drawer-in-black",
+     "target": "fantasy-drawer-in-cg",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e21",
+     "source": "fantasy-drawer-in-cg",
+     "target": "fantasy-drawer",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e22",
+     "source": "fantasy-drawer",
+     "target": "fantasy-drawer-silent0",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e23",
+     "source": "fantasy-drawer-silent0",
+     "target": "fantasy-drawer-silent1",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e24",
+     "source": "fantasy-drawer-silent1",
+     "target": "fantasy-drawer-silent2",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e25",
+     "source": "fantasy-drawer-silent2",
+     "target": "fantasy-drawer-silent3",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e26",
      "source": "normal-end",
      "target": "to-site-black",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
-     "id": "e19",
+     "id": "e27",
      "source": "tragic-seq",
      "target": "to-site-black",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
-     "id": "e20",
+     "id": "e28",
      "source": "fantasy-seq",
      "target": "to-site-black",
      "sourceHandle": "out",
      "targetHandle": "in"
     },
     {
-     "id": "e21",
+     "id": "e29",
      "source": "to-site-black",
+     "target": "to-site",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e30",
+     "source": "fantasy-drawer-silent3",
+     "target": "to-site-black-long0",
+     "sourceHandle": "out",
+     "targetHandle": "in"
+    },
+    {
+     "id": "e31",
+     "source": "to-site-black-long0",
      "target": "to-site",
      "sourceHandle": "out",
      "targetHandle": "in"

@@ -502,3 +502,128 @@ JOBS.update({
     "NS01": shoe_fix("NS01", [("zhen", 17, 17), ("lin", 45, 45), ("cheng", 45, 45)], "CHENG ZHEN, crossing the finish line in the red singlet, wears the red-and-white "
                      "running shoes from image 3.", "NS04a", "the two pairs of running shoes; the red-and-white pair is CHENG ZHEN's"),
 })
+
+# ── 鏡子線後續「關上抽屜」（2026-11-16，讀者茶葉飲料提議；文字在 canon/鏡子線-後續-關上抽屜.md） ──
+JOBS.update({
+    "lin58": anchor([anc("lin45"), STYLE_B],
+        "Image 1 is Lin Xiangwan (林向晚) at about 45. Image 2 is the painting style anchor only.",
+        f"Paint the same woman clearly aged to 58, living alone in a small town: {LIN_FACE} now mostly gray, cut to just below the "
+        "ears and tucked behind them, deeper lines at the eyes and mouth, cheeks a little hollow, thinner and slightly frail, she must "
+        "look obviously older than image 1, a woman near sixty, still upright and graceful. She wears a faded dusty-blue cotton "
+        "shirt, a plain beige knit vest and loose dark gray trousers. Expression: calm, quiet, a little tired."),
+    "cheng58": anchor([anc("cheng45"), STYLE_B],
+        "Image 1 is Cheng Che (程徹) at about 45. Image 2 is the painting style anchor only.",
+        f"Paint the same man clearly aged to 58: {CHENG_FACE} now cut short and mostly gray-white, deeper lines on the forehead and at "
+        "the eyes, slightly heavier jaw, still a lean runner's build; he must look obviously older than image 1, a man near sixty. "
+        "He wears a navy windbreaker over a light gray t-shirt and khaki trousers, a camera strap around his neck. Expression: warm, proud."),
+    "grandpa86": anchor([LIN24, STYLE_B],
+        "Image 1 is Lin Xiangwan (林向晚), his child, for family resemblance only (same eye shape). Image 2 is the painting style anchor only.",
+        "Paint her father at about 86, a stern old Taiwanese man: thin white hair combed back, a long face with deep lines, thick gray "
+        "eyebrows, the same eye shape as image 1, slightly stooped but still standing straight out of pride. He wears a plain "
+        "white short-sleeved button shirt tucked into dark gray trousers, a simple old wristwatch. Expression: stern, closed, mouth set."),
+})
+WHO["grandpa"] = ("GRANDPA", "Lin Xiangwan's father, keep his face, white hair and stern look")
+ANC.update({("lin", 58): anc("lin58"), ("cheng", 58): anc("cheng58"), ("grandpa", 86): anc("grandpa86")})
+SMALL_HOUSE = ("a small old single-story house in a quiet seaside town in Taiwan, sparse and tidy: a simple light-wood vanity desk with "
+               "a round mirror against the wall, a desk lamp, a window that looks out on an elementary school's red running track")
+FEET = ("Anyone shown full length has both feet resting flat on the ground with soft contact shadows. ")
+JOBS.update({
+    "FD00": cg([("lin", 35, 34)], f"""Scene: {VANITY}, the same night as the mirror picture. The bedroom door behind her is ajar and
+bright television light from the living room spills in. LIN XIANGWAN (34) sits at the vanity and, with her right hand, slides the
+small top drawer shut on a stack of envelopes (only their edges visible). Her face in profile is calm and blank, eyes lowered. Her left
+hand rests flat on the desk."""),
+    "FD01": cg([("lin", 35, 37), ("cheng", 35, 37)], f"""Scene: a dark {LIVING}, evening, the ceiling light OFF; only gray light from
+the window. CHENG CHE (37), a little pale from a cold, sits motionless on the sofa, elbows on his knees. Dozens of handwritten letters
+(illegible) lie opened one by one across the whole coffee table. In the background, LIN XIANGWAN (37) has just come in the front door
+in office clothes, a work bag slipping off her shoulder, frozen, her face draining of color. {FEET}"""),
+    "FD02": cg([("lin", 35, 37), ("cheng", 35, 37)], """Scene: the same dark living room, closer. CHENG CHE (37) on the sofa has lifted
+his head and looks up at LIN XIANGWAN, his eyes red and hard, a look of hurt and of seeing a stranger; one opened letter (illegible)
+hangs from his left hand. LIN XIANGWAN (37) stands a few steps away, seen from the side and slightly behind, shoulders drawn in, both
+hands clutching the strap of her bag."""),
+    "FD03": cg([("lin", 35, 38)], f"""Scene: outside the entrance of a Taiwanese district household registration office on an overcast
+day (no readable signs), the same steps as the picture where she once held her new ID card. LIN XIANGWAN (38) stands alone on the
+steps, holding a thin folder against her chest, looking at nothing. People pass by in the distance, blurred. {FEET}She wears plain
+white flat shoes."""),
+    "FD04": cg([("lin", 35, 38)], f"""Scene: a quiet narrow street in a small Taiwanese seaside town in winter, low old houses, gray sea
+visible at the end of the street, bare trees, overcast. LIN XIANGWAN (38) walks away from the camera, alone, pulling one small
+suitcase, wearing a long dark coat, seen three-quarters from behind. {FEET}She wears plain white flat shoes."""),
+    "FD05": cg([("lin", 45, 48)], f"""Scene: a small morning market in the same seaside town, a vegetable stall under a canvas awning.
+A smiling old local woman (a neighbor, about 75, short gray perm, apron) presses a bundle of green onions and leafy vegetables into the
+arms of LIN XIANGWAN (48), who smiles politely and a little shyly, holding a cloth shopping bag. Warm everyday light."""),
+    "FD06": cg([("lin", 45, 50), ("grandpa", 86, 86)], f"""Scene: a Taiwanese funeral hall, soft white and pale yellow chrysanthemums
+filling the back wall, a framed photo of an elderly woman among the flowers (face soft and small, nothing readable), a few mourners in
+black blurred in the background. On the LEFT stands GRANDPA (86) in a black suit, stiff and stooped, his face turned away toward the
+altar. On the far RIGHT, across the whole width of the hall, stands LIN XIANGWAN (50) in a black dress, alone, looking toward him. The
+empty floor between them is wide. {FEET}"""),
+    "FD07": cg([("lin", 58, 58)], f"""Scene: early morning at a small elementary school sports ground, a 200m red running track, low
+concrete steps for seating, sea mist, soft sunrise light. On the track a young father (about 35) walks slowly with his small daughter
+(about 4, laughing, pigtails) sitting on his shoulders, her arms wrapped around his head. LIN XIANGWAN (58) sits alone on the concrete
+steps in the foreground side, small in the frame, watching them, her hands folded on her knees. {FEET}"""),
+    "FD08": cg([("lin", 58, 55)], f"""Scene: {SMALL_HOUSE}, daytime. LIN XIANGWAN (55) stands at the vanity and slips a folded
+pamphlet (a picture of a family on the cover, all text blurred) into the open drawer, on top of a thick stack of letters tied with a
+rubber band. Her face is downcast, her hand lingering on the pamphlet."""),
+    "FD09": cg([("lin", 58, 58)], f"""Scene: a long seawall promenade in a small Taiwanese town at dusk in winter, wind blowing, orange
+and violet sky. In the middle distance a young couple walks away from us close together; the girl's hand is pushed into the pocket of
+the boy's jacket. Further back, LIN XIANGWAN (58) walks alone behind them in a long coat, her hands in her own pockets, looking at the
+couple. {FEET}"""),
+    "FD10": cg([("lin", 58, 55)], f"""Scene: {SMALL_HOUSE}, late at night, the room dark except for the faint glow of a phone. LIN
+XIANGWAN (55) sits on the edge of her bed holding a phone in both hands; the screen faces away from us, only its pale light on her face.
+Her eyes are wet, her expression still."""),
+    "FD11": cg([("lin", 58, 58)], f"""Scene: {SMALL_HOUSE}, night, the desk lamp on. LIN XIANGWAN (58), thin and tired, sits at the
+vanity writing a letter (illegible) with a pen, seen from behind and slightly to the side, the same angle as the picture of her writing
+the very first letter when she was young. The drawer is open beside her, full of letters tied in bundles. A small bottle of pills and a
+glass of water on the desk. Her reflection in the round mirror is soft and blurred."""),
+    # 信讀完之後的無字 CG
+    "FE1": cg([], f"""Scene with NO people: {SMALL_HOUSE}, early morning, empty and still. The vanity drawer is pulled open; inside are
+many bundles of handwritten letters tied with rubber bands, the newest letter on top. The chair is pushed in. A thin cardigan hangs on
+the back of the chair. Pale light through the window, the empty school track outside."""),
+    "FE2": cg([("grandpa", 86, 90)], f"""Scene: an old Taiwanese family living room at night, old wooden furniture, a single lamp.
+GRANDPA (90), frail, sits alone in an armchair facing a television that shows a red running track with sprinters (no text). On the
+low tea table beside him lies a neat stack of plain red envelopes (no characters), the ones at the bottom faded pinkish with age, the
+top one bright red. His hand rests near the stack. We see his face in profile, unreadable, eyes glistening."""),
+    "FE3": cg([("cheng", 58, 58)], f"""Scene: just behind the finish line of a junior high school athletics meet on a sunny day,
+crowded stands in the background, everyone looking at the track. CHENG CHE (58) holds up a camera to photograph his daughter, a
+14-year-old girl with a ponytail in a running singlet, who holds up a medal on a ribbon and laughs with her eyes squeezed into lines.
+He is smiling the same way. Nobody in the crowd looks at them. {FEET}"""),
+    "FE4": cg([], """Scene: dawn over the small elementary school sports ground by the sea, mist lifting, the 200m red track. Two or
+three people jog on the track in the distance, small and blurred. In the foreground the low concrete steps are empty and quiet, the first
+light falling on the spot where she used to sit. Calm, ordinary, the world going on."""),
+})
+
+# 向晚 45 歲以後：共用描述的「long straight black hair」會壓過定錨，這幾張改寫成定錨上的髮型與年紀（2026-11-16 第一版全畫成年輕長髮）
+_OLD_LIN = {45: ("her hair now shoulder length and loosely tied back, clearly visible gray streaks, smile lines at the eyes; she looks "
+                 "like a woman around fifty, NOT young"),
+            58: ("her hair now short, mostly gray, cut just below the ears and tucked behind them, wrinkles at the eyes and mouth, thin "
+                 "face; she looks like a woman near sixty, NOT young, no long hair")}
+for _k in ("FD05", "FD06", "FD07", "FD08", "FD09", "FD10", "FD11"):
+    _age = 45 if _k in ("FD05", "FD06") else 58
+    JOBS[_k]["prompt"] = JOBS[_k]["prompt"].replace("long straight black hair", _OLD_LIN[_age])
+JOBS["FE2"]["prompt"] = JOBS["FE2"]["prompt"].replace(
+    "lies a neat stack of plain red envelopes (no characters), the ones at the bottom faded pinkish with age, the\ntop one bright red.",
+    "lies a fanned-out pile of about twenty separate thin flat red paper envelopes (hongbao, no characters), clearly individual "
+    "envelopes, the older ones faded to pale pink, the newest one on top bright red.")
+
+# 2026-11-16 作者：信一開頭寫第三十一封，畫面卻是年輕的向晚 → 開頭改用 FD11（58 歲寫信），「最近，我在操場」換這張
+JOBS["FD12"] = cg([("lin", 58, 58)], """Scene: late afternoon at the small elementary school sports ground by the sea, the 200m red
+running track, low concrete steps for seating, golden low sun, long shadows. LIN XIANGWAN (58), thin and tired, sits alone on the
+lowest concrete step, half way around the track, resting; her right hand presses lightly against her chest, her left hand holds a folded
+cardigan on her knees, she breathes slowly and looks out at the empty track. Anyone shown full length has both feet resting flat on
+the ground with soft contact shadows. She wears plain white flat shoes.""")
+JOBS["FD12"]["prompt"] = JOBS["FD12"]["prompt"].replace("long straight black hair", _OLD_LIN[58])
+
+# 2026-11-16 作者同意：紅包數量對上外婆過世後的八年，外公手上是今年的第九個；電視是女子四百（對應鏡子線第一封信結尾）
+JOBS["FE2"] = cg([("grandpa", 86, 90)], """Scene: an old Taiwanese family living room at night, old wooden furniture, a single lamp.
+GRANDPA (90), frail, sits alone in an armchair facing a television that shows a women's 400m race on a red track: several women
+sprinters in lanes (no text, no numbers). On the low tea table beside him lie exactly EIGHT separate thin flat red paper envelopes
+(hongbao, plain red, no characters) laid out in a neat row, slightly overlapping, each clearly a single envelope, all unopened; the
+first ones a little faded. In both hands on his lap he holds a ninth red envelope, new and bright, looking down at it, not at the TV.
+His face in profile is stern but his eyes are wet.""")
+
+# 2026-11-16 作者：程徹的女兒眼尾有魚尾紋、不像 14 歲（原本寫 eyes squeezed into lines）
+JOBS["FE3"] = cg([("cheng", 58, 58)], """Scene: just behind the finish line of a junior high school athletics meet on a sunny day,
+crowded stands in the background, everyone looking at the track. CHENG CHE (58) holds up a camera to photograph his daughter.
+HIS DAUGHTER is a young 14-year-old junior high school girl: a small slim child's build, a round youthful face with soft full cheeks,
+smooth fresh skin like a young teenager, a high black ponytail, a red running singlet and black shorts. She holds up a medal on a
+ribbon and laughs; her eyes curve into happy crescent moons, the same smile as her father's. Behind the camera he is smiling the same
+way, with the lines of a man near sixty. Nobody in the crowd looks at them. Anyone shown full length has both feet resting flat on the
+ground with soft contact shadows.""")
